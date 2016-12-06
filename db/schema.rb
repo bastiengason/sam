@@ -10,10 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161205172308) do
+ActiveRecord::Schema.define(version: 20161206091736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string   "status"
+    t.integer  "task_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["task_id"], name: "index_notifications_on_task_id", using: :btree
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "distance"
+    t.string   "frequency"
+    t.string   "time_slot"
+    t.string   "status"
+    t.integer  "user_id"
+    t.integer  "category_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["category_id"], name: "index_tasks_on_category_id", using: :btree
+    t.index ["user_id"], name: "index_tasks_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -32,4 +60,7 @@ ActiveRecord::Schema.define(version: 20161205172308) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "notifications", "tasks"
+  add_foreign_key "tasks", "categories"
+  add_foreign_key "tasks", "users"
 end
