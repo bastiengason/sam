@@ -10,3 +10,7 @@ git checkout master
 git pull origin master
 git checkout mybranch
 git merge master
+
+To create a branch
+git checkout -b mybranch
+git push origin mybranch
