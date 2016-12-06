@@ -1,0 +1,9 @@
+<div class="container">
+<h1>Profile#edit</h1>
+<%= simple_form_for current_user, url: profile_path, method: :put do |f| %>
+  <%= f.input :name %>
+  <%= f.button :submit %>
+<% end %>
+<%#= link_to "Back", profile_path %>
+</div>
+
