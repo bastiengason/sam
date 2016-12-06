@@ -1,0 +1,12 @@
+Git Cheatsheet
+
+To push:
+git add .
+git commit -m "My comment"
+git push origin mybranch
+
+To pull:
+git checkout master
+git pull origin master
+git checkout mybranch
+git merge master
