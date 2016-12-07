@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'dashboard/category'
+
   devise_for :users
   root to: 'pages#home'
 
@@ -9,5 +11,9 @@ Rails.application.routes.draw do
   # resources :users, only: [:show]
   resources :notifications, only: [:create, :update]
   resource :profile
+
+  get 'notification/done' => 'notifications#notifdone', as: :notif_done
+  get 'notification/not_done' => 'notifications#notifcancell', as: :notif_cancell
+
 
 end
