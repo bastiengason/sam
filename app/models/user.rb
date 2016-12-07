@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+
   has_many :tasks
   has_many :notifications, through: :tasks
 
@@ -12,4 +13,5 @@ class User < ApplicationRecord
   def user_name
     name || email
   end
+
 end
