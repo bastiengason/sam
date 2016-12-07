@@ -10,7 +10,7 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
-    @task.user = @task
+    @task.user = current_user
     @task.save!
     redirect_to tasks_show_path
   end
