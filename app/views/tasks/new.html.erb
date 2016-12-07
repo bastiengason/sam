@@ -1,2 +1,12 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+ <div class="container" "text-center">
+ <h1>Define your new task</h1>
+
+ <%= simple_form_for @task do |f| %>
+  <%= f.input :name %>
+  <%= f.input_field :name %>
+  <%= f.hint 'It all starts with the intention!' %>
+  <%= f.button :submit %>
+
+<% end %>
+</div>
+

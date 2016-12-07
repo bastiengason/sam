@@ -35,6 +35,10 @@ class TasksController < ApplicationController
     redirect_to tasks_index_path
   end
 
+  def select_category
+    @categories = Category.all
+  end
+
   private
 
   def set_task
@@ -42,6 +46,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:name, :distance, :frequency, :status)
+    params.require(:task).permit(:name, :distance, :frequency, :status, :category_id)
   end
 end
