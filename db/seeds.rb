@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create(email: "anne@aol.com", name: "annela", password: "alalal")
+Category.create(name: "house")
+Task.create(name: "Water the plants", category: Category.all.sample, user: User.all.sample)

@@ -1,0 +1,18 @@
+<div class="category-creation-title" "text-align">
+  <h3><%= current_user.name %> you are about to start!</h3>
+  <h4>Choose a category for your task</h4>
+</div>
+
+<div class="container">
+  <% @categories.each do |category| %>
+  <%= link_to new_task_path(category_id: category.id) do  %>
+    <div class="row">
+      <div class="category-block" style="background-color: <%= category_link_color(category) %>">
+        <%= category.name %>
+      </div>
+    </div>
+   <% end %>
+  <% end %>
+</div>
+
+
