@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(email: "anne@aol.com", name: "annela", password: "alalal")
-Category.create(name: "house")
+Category.create([{name: "home"},{name: "health"}])
 Task.create(name: "Water the plants", category: Category.all.sample, user: User.all.sample)
