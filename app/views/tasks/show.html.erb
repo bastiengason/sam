@@ -1,2 +1,19 @@
-<h1><%=Your @task.name %></h1>
-<p> </p>
+<div class="container">
+  <h1> So, ready to start to <%= @task.name %> ?</h1>
+  <p> Great! I'll help by reminding you of it </p>
+  <p> From a distance of <%= @task.distance %></p>
+  <p> A frequency of <%= @task.frequency %></p>
+  <p> At a preffered time of <%= @task.time_slot %></p>
+</div>
+
+
+<div class="container" width="320" >
+
+<%= link_to "Need to change something?", edit_task_path(@task), class: "btn btn-primary show-task-button" %>
+
+
+
+<%= link_to "Everything good? Ready!", tasks_path(@task), class: "btn btn-primary show-task-button" %>
+
+</div>
+</div>
