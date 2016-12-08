@@ -49,10 +49,7 @@
       <div class="title-radio">
        <h3>Category</h3>
      </div>
-     <% Category.all.each do |category| %>
-     <%= radio_button_tag(:category, category.name) %>
-     <%= label_tag(:category, category.name) %><br>
-     <% end %>
+     <%= f.association :category, as: :radio_buttons%>
    </div>
  </div>
 </div>
