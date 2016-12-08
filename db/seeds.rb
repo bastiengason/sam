@@ -12,6 +12,7 @@ User.destroy_all
 Category.destroy_all
 
 User.create(email: "anne@aol.com", name: "annela", password: "alalal")
+
 home = Category.create(name: "home")
 health = Category.create(name: "health")
 si = Category.create(name: "self-improvement")
@@ -30,3 +31,4 @@ Task.create(name: "Attend networking events", category: prod, user: User.all.sam
 10.times do
   Notification.create(status: "done", task: Task.first)
 end
+

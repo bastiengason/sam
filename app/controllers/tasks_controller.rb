@@ -5,20 +5,27 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = current_user.tasks.build
+    @task = Task.new
   end
 
   def create
     @task = Task.new(task_params)
+
+    category_name = params[:category]
+    category = Category.find_by(name: category_name)
+    @task.category = category
+    @task.frequency = params[:frequency]
+    @task.distance = params[:distance]
+    @task.time_slot = params[:time_slot]
     @task.user = current_user
     @task.save!
-    redirect_to tasks_show_path
+    redirect_to task_path(@task)
   end
 
   def update
     @task = Task.find(params[:id])
     @task.update(task_params)
-    redirect_to tasks_index_path
+    redirect_to tasks_path
   end
 
   def edit

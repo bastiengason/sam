@@ -1,0 +1,66 @@
+<%= simple_form_for @task do |f| %>
+
+<div class="well">
+  <div class="title-radio">
+    <h3>Name</h3>
+  </div>
+  <%= f.input :name, label: false %>
+</div>
+
+<div class="well text-left">
+  <div class="row">
+    <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-10">
+     <div class="title-radio">
+       <h3>Distance</h3>
+     </div>
+     <%= f.input :distance, collection: Task::DISTANCE_OPTIONS, as: :radio_buttons, label: false %>
+   </div>
+ </div>
+</div>
+
+
+<div class="well text-left">
+ <div class="row">
+  <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-10">
+    <div class="title-radio">
+     <h3>Frequency</h3>
+   </div>
+   <%= f.input :frequency, collection: Task::FREQUENCY_OPTIONS, as: :radio_buttons, label: false %>
+ </div>
+</div>
+</div>
+
+<div class="well text-left">
+  <div class="row">
+  <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-10">
+      <div class="title-radio">
+           <h3>Time Slot</h3>
+         </div>
+         <%= f.input :time_slot, collection: Task::TIME_SLOT_OPTIONS, as: :radio_buttons, label: false %>
+       </div>
+     </div>
+   </div>
+
+
+
+<div class="well text-left">
+    <div class="row">
+      <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-10">
+      <div class="title-radio">
+       <h3>Category</h3>
+     </div>
+     <% Category.all.each do |category| %>
+     <%= radio_button_tag(:category, category.name) %>
+     <%= label_tag(:category, category.name) %><br>
+     <% end %>
+   </div>
+ </div>
+</div>
+
+<%= f.hint 'It all starts with the intention!' %>
+
+<div class='submit-task'>
+ <%= f.button :submit %>
+</div>
+
+<% end %>

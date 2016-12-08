@@ -1,12 +1,13 @@
- <div class="container" "text-center">
- <h1>Define your new task</h1>
+ <div class="container text-center">
+   <div class="row">
+    <div class="col-xs-12">
+       <h1><%= greet %></h1>
+       <h1>Define your new task, <%= current_user.user_name %></h1>
 
- <%= simple_form_for @task do |f| %>
-  <%= f.input :name %>
-  <%= f.input_field :name %>
-  <%= f.hint 'It all starts with the intention!' %>
-  <%= f.button :submit %>
-
-<% end %>
+       <%= render "form" %>
+     </div>
+  </div>
 </div>
+
+
 
