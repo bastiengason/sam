@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Select a category</h1>
+  <!-- <%#= current_user.tasks.category.pluck(:name) %> -->
+  <% user_categories = current_user.tasks.map(&:category).uniq %>
+  <% user_categories.each do |category| %>
+  <ul style="list-style: none;">
+    <li><%= link_to category.name, dashboard_category_path(category) %></li>
+  </ul>
+  <% end %>
+</div>
