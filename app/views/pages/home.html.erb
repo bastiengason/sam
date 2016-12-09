@@ -1,7 +1,11 @@
 <!-- <h1>Pages#home</h1>
   <p>Find me in app/views/pages/home.html.erb</p> -->
 
+<div id="notif">
+  <%= link_to "notif?", notif_notifications_path, remote: true %>
+</div>
 
+<div id="notif_results"></div>
 
   <%if user_signed_in? %>
   <% else %>
