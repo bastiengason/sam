@@ -14,4 +14,16 @@ class User < ApplicationRecord
     name || email
   end
 
+  def categories
+    tasks.map(&:category).uniq
+  end
+
+  def category_score(category)
+    category_tasks = tasks.where(category: category)
+    total_score = 0
+    category_tasks.each do |t|
+      total_score += t.score
+    end
+    total_score / category_tasks.size
+  end
 end
