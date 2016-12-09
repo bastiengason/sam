@@ -11,12 +11,26 @@ Task.destroy_all
 User.destroy_all
 Category.destroy_all
 
-Category.create(name: "Home")
-Category.create(name: "Health")
-Category.create(name: "Self-improvement")
-Category.create(name: "Productivity")
-Category.create(name: "Other")
-
 
 User.create(email: "anne@aol.com", name: "annela", password: "alalal")
-Task.create(name: "Water the plants", category: Category.all.sample, user: User.all.sample)
+
+home = Category.create(name: "home")
+health = Category.create(name: "health")
+si = Category.create(name: "self-improvement")
+prod = Category.create(name: "productivity")
+other = Category.create(name: "other")
+
+Task.create(name: "Water the plants", category: home, user: User.all.sample)
+Task.create(name: "Practice yoga", category: health, user: User.all.sample)
+Task.create(name: "Do fitness", category: health, user: User.all.sample)
+Task.create(name: "Deeply breathe", category: health, user: User.all.sample)
+Task.create(name: "Drink water", category: health, user: User.all.sample)
+Task.create(name: "Meditate", category: si, user: User.all.sample)
+Task.create(name: "Plan my work day", category: prod, user: User.all.sample)
+Task.create(name: "Attend networking events", category: prod, user: User.all.sample)
+
+10.times do
+  Notification.create(status: "done", task: Task.first)
+end
+
+
