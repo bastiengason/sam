@@ -13,7 +13,8 @@
      <div class="title-radio">
        <h3>Distance</h3>
      </div>
-     <%= f.input :distance, collection: Task::DISTANCE_OPTIONS, as: :radio_buttons, label: false %>
+      <%= f.input :distance, collection: Task::DISTANCE_OPTIONS, as: :radio_buttons, label: false, wrapper_html: { class: 'container-buttons' } %>
+     </div>
    </div>
  </div>
 </div>
