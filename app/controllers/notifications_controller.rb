@@ -2,6 +2,11 @@ class NotificationsController < ApplicationController
   def index
   end
 
+  def notif
+    # @current_user.
+    render "notif", layout: nil
+  end
+
   def new
   end
 
