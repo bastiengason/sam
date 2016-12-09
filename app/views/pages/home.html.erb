@@ -1,8 +1,25 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- <h1>Pages#home</h1>
+  <p>Find me in app/views/pages/home.html.erb</p> -->
 
 
 
-<% if @notif %>
-<%= render "notifications/notification" %>
-<% end %>
+  <%if user_signed_in? %>
+  <% else %>
+  <%= image_tag("sam-1-1.png") %>
+  <div class="signin btn">
+    <div class="btn-sign">
+      <%= link_to "Let\s Sign in!", new_user_session_path %>
+    </div>
+  </div>
+  <% end %>
+
+  <% if @notif %>
+  <%= render "notifications/notification" %>
+  <% end %>
+
+<% Category.all.each do |cat| %>
+  <li>
+    <%= link_to cat.name, category_path(cat.id) %>
+  </li>
+<%end%>
+

@@ -14,6 +14,4 @@ Rails.application.routes.draw do
 
   get 'notification/done' => 'notifications#notifdone', as: :notif_done
   get 'notification/not_done' => 'notifications#notifcancell', as: :notif_cancell
-
-
 end
