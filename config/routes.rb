@@ -9,7 +9,12 @@ Rails.application.routes.draw do
 
   resources :tasks
   resources :categories, only: [:index, :show]
-  resources :notifications, only: [:create, :update]
+  resources :notifications, only: [:create, :update] do
+    collection do
+      get 'notif'
+    end
+  end
+
   resource :profile
 
   get 'notification/done' => 'notifications#notifdone', as: :notif_done

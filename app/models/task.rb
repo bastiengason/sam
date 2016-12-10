@@ -11,7 +11,12 @@ class Task < ApplicationRecord
 
 
   def score
-    notifications.where(status: "done").size * 3
+    current_score = notifications.where(status: "done").size * 3
+    if current_score >= 100
+      100
+    else
+      current_score
+    end
   end
 
   def score_color
