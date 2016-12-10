@@ -1,0 +1,9 @@
+<%if user_signed_in? %>
+<% else %>
+  <%= image_tag("sam-1-1.png") %>
+  <div class="signin btn">
+    <div class="btn-sign">
+      <%= link_to "Let\s Sign in!", new_user_session_path %>
+    </div>
+  </div>
+<% end %>

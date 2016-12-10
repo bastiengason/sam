@@ -1,29 +1,34 @@
-<!-- <h1>Pages#home</h1>
-  <p>Find me in app/views/pages/home.html.erb</p> -->
-
-<div id="notif">
-  <%= link_to "notif?", notif_notifications_path, remote: true %>
+<!-- SCREEN 1 -->
+<div id="screen-1">
+  <!-- SAM LOGO -->
+  <%= image_tag("sam-shadow.png", :class => "sam-shadow") %>
+  <!-- ARROW 1 -->
+  <%= link_to '#screen-2' do %>
+    <%= image_tag("arrow_down_1x.png", class: "arrow") %>
+  <% end %>
 </div>
 
-<div id="notif_results"></div>
+<!-- SCREEN 2 -->
+<div id="screen-2">
+  <!-- DESCRIPTION -->
+  <div>
 
-  <%if user_signed_in? %>
-  <% else %>
-  <%= image_tag("sam-1-1.png") %>
-  <div class="signin btn">
-    <div class="btn-sign">
-      <%= link_to "Let\s Sign in!", new_user_session_path %>
+  </div>
+  <!-- ARROW 2 -->
+  <%= link_to '#screen-3' do %>
+    <%= image_tag("arrow_down_1x.png", class: "arrow") %>
+  <% end %>
+</div>
+
+<!-- SCREEN 3 -->
+<div id="screen-3">
+  <!-- SIGNIN / SIGNUP BTN -->
+  <div class="connect">
+    <div>
+      <%= link_to "Connect you", new_user_session_path, class: "sign btn" %>
+    </div>
+    <div class="button">
+      <%= link_to "Create account", new_user_session_path, class: "sign btn" %>
     </div>
   </div>
-  <% end %>
-
-  <% if @notif %>
-  <%= render "notifications/notification" %>
-  <% end %>
-
-<% Category.all.each do |cat| %>
-  <li>
-    <%= link_to cat.name, category_path(cat.id) %>
-  </li>
-<%end%>
-
+</div>
