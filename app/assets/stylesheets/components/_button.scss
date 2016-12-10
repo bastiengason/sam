@@ -1,13 +1,14 @@
 .sign {
-  height: 40px;
+  height: 35px;
   width: 140px;
+  font-size: 14px;
   margin: auto;
   display: block;
   border-radius: 20px;
   color: #999999;
   border: 1px solid #FFFFFF;
   background-color: #FFFFFF;
-  box-shadow: 0px 0px 35px rgba(254, 129, 108, 0.45);
+  box-shadow: 0px 0px 35px rgba(254, 129, 108, 0.90);
 }
 
 .log {
@@ -16,9 +17,16 @@
 }
 
 .connect {
-  padding-top: 293px;
+  padding-top: 273px;
 }
 
 .button {
-  padding-top: 20px;
+  padding-top: 40px;
+}
+
+.sign-shadow {
+  display: block;
+  padding-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
 }
