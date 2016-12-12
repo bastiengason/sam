@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get 'dashboard/category/:id', to: 'dashboard#category', as: :dashboard_category
+  get 'dashboard/categories', to: 'dashboard#categories', as: :dashboard_categories
   get 'dashboard/index'
 
   get 'tasks/select_category', to: 'tasks#select_category'

@@ -1,0 +1,38 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Category", "Score"],
+        <%= raw(current_user.categories.map do |category|
+          "['#{category.name}',#{current_user.category_score(category)}]"
+        end.join(","))
+        %>
+        ]);
+
+      var options = {
+        pieHole: 0.4,
+        legend: 'none'
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+
+
+  <div class="container">
+      <h1 class='greeting'><%= greet %> <%= current_user.user_name %>!</h1>
+    <div class="donutchart">
+
+      <div id="donutchart" style="width: 100%; height: 200px;"></div>
+    </div>
+
+    </div>
+    </body>
+    </html>
