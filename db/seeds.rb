@@ -33,4 +33,8 @@ Task.create(name: "Attend networking events", category: prod, user: User.all.sam
   Notification.create(status: "done", task: Task.first)
 end
 
+5.times do
+  Notification.create(status: "done", task: Task.last)
+end
+
 

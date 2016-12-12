@@ -18,6 +18,14 @@ class User < ApplicationRecord
     tasks.map(&:category).uniq
   end
 
+  def score
+    total_score = 0
+    categories.each do |category|
+      total_score += category_score(category)
+    end
+    total_score / categories.size
+  end
+
   def category_score(category)
     category_tasks = tasks.where(category: category)
     total_score = 0
@@ -26,4 +34,29 @@ class User < ApplicationRecord
     end
     total_score / category_tasks.size
   end
+
+  def score_color(category)
+    if category_score(category) < 30
+      "#FC5252"
+    elsif category_score(category) >= 30 && category_score(category) < 70
+      "#F5A623"
+    else
+      "#50E3C2"
+    end
+  end
+
+  def evolution
+    if score < 20
+       "plant-growing-1.png"
+    elsif score < 40
+      "plant-growing-2.png"
+    elsif score < 60
+      "plant-growing-3.png"
+    elsif score < 80
+      "plant-growing-4.png"
+    else
+      "plant-growing-5.png"
+    end
+  end
+
 end
