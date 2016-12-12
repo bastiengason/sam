@@ -1,13 +1,16 @@
 class NotificationsController < ApplicationController
+
+  before_action :set_user, only: :notif
   def index
   end
 
   def notif
-    # @current_user.
+
     render "notif", layout: nil
   end
 
-  def new
+  def set_user
+@user = current_user
   end
 
   def create
