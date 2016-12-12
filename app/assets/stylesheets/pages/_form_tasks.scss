@@ -1,8 +1,25 @@
 .form_css_complete {
-  background-color: RGBA(255, 113, 89, 1.00);
+  background: linear-gradient( 0deg, #FFA48D, #FF6A51);
 }
 
 .well {
-  background-color: RGBA(255, 113, 89, 1.00);
-  ;
+  background-color: transparent;
+  border: none;
+}
+
+.form-control {
+background-color: RGBA(253, 162, 142, 1.00);
+
+}
+
+.h1, h1, h2, h3, h4, h5, p {
+  color: white;
+}
+
+.form-content-white {
+  color: white;
+}
+
+.form-control, select, optional {
+  width: 26%;
 }
