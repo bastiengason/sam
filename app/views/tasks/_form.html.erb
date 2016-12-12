@@ -1,8 +1,8 @@
 <%= simple_form_for @task do |f| %>
-
+<div class="page-task">
 <div class="well">
   <div class="title-radio">
-    <h3>Name</h3>
+    <h3>What's your task?</h3>
   </div>
   <%= f.input :name, label: false %>
 </div>
@@ -14,9 +14,52 @@
        <h3>Distance</h3>
      </div>
      <%= f.input :distance, collection: Task::DISTANCE_OPTIONS, as: :radio_buttons, label: false %>
+     <input type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
+<span id="range">0</span>
    </div>
  </div>
 </div>
+
+
+
+
+
+</head>
+<body>
+  <h1>Distance</h1>
+
+  <div style="position:relative; margin:auto; width:90%">
+    <span style="position:absolute; color:red; border:1px solid blue; min-width:100px;">
+    <span id="myValue"></span>
+    </span>
+    <input type="range" id="myRange" max="10" min="0" style="width:80%">
+  </div>
+
+  <script type="text/javascript" charset="utf-8">
+var myRange = document.querySelector('#myRange');
+var myValue = document.querySelector('#myValue');
+var myUnits = 'meters';
+var off = myRange.offsetWidth / (parseInt(myRange.max) - parseInt(myRange.min));
+var px =  ((myRange.valueAsNumber - parseInt(myRange.min)) * off) - (myValue.offsetParent.offsetWidth / 2);
+
+  myValue.parentElement.style.left = px + 'px';
+  myValue.parentElement.style.top = myRange.offsetHeight + 'px';
+  myValue.innerHTML = myRange.value + ' ' + myUnits;
+
+  myRange.oninput =function(){
+    let px = ((myRange.valueAsNumber - parseInt(myRange.min)) * off) - (myValue.offsetWidth / 2);
+    myValue.innerHTML = myRange.value + ' ' + myUnits;
+    myValue.parentElement.style.left = px + 'px';
+  };
+  </script>
+
+</body>
+</html>
+
+
+
+
+
 
 
 <div class="well text-left">
@@ -49,10 +92,7 @@
       <div class="title-radio">
        <h3>Category</h3>
      </div>
-     <% Category.all.each do |category| %>
-     <%= radio_button_tag(:category, category.name) %>
-     <%= label_tag(:category, category.name) %><br>
-     <% end %>
+     <%= f.association :category, as: :radio_buttons, label: false%>
    </div>
  </div>
 </div>
@@ -64,3 +104,4 @@
 </div>
 
 <% end %>
+</div>

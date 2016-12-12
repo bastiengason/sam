@@ -11,12 +11,11 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
 
+
     category_name = params[:category]
     category = Category.find_by(name: category_name)
     @task.category = category
-    @task.frequency = params[:frequency]
-    @task.distance = params[:distance]
-    @task.time_slot = params[:time_slot]
+  
     @task.user = current_user
     @task.save!
     redirect_to task_path(@task)
@@ -53,6 +52,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:name, :distance, :frequency, :status, :category_id)
+    params.require(:task).permit(:name, :distance, :time_slot, :frequency, :status, :category_id)
   end
 end
