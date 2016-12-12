@@ -1,8 +1,37 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- SCREEN 1 -->
+<div id="screen-1">
+  <!-- SAM LOGO -->
+  <%= image_tag("sam-shadow.png", :class => "sam-shadow") %>
+  <!-- ARROW 1 -->
+  <%= link_to '#screen-2' do %>
+    <%= image_tag("arrow_down_1x.png", class: "arrow") %>
+  <% end %>
+</div>
 
+<!-- SCREEN 2 -->
+<div id="screen-2">
+  <!-- DESCRIPTION -->
+  <div>
 
+  </div>
+  <!-- ARROW 2 -->
+  <%= link_to '#screen-3' do %>
+    <%= image_tag("arrow_down_1x.png", class: "arrow") %>
+  <% end %>
+</div>
 
-<% if @notif %>
-<%= render "notifications/notification" %>
-<% end %>
+<!-- SCREEN 3 -->
+<div id="screen-3">
+  <!-- SIGNIN / SIGNUP BTN -->
+  <div class="connect">
+    <div>
+      <%= link_to "Connect you", new_user_session_path, class: "sign btn" %>
+    </div>
+    <div class="button">
+      <%= link_to "Create account", new_user_registration_path, class: "sign btn" %>
+    </div>
+  </div>
+  <div>
+    <%= image_tag("sign-shadow.png", class: "sign-shadow") %>
+  </div>
+</div>

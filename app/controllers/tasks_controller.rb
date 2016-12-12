@@ -10,9 +10,12 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
-    # category_name = params[:category]
-    # category = Category.find_by(name: category_name)
-    # @task.category = category
+
+
+    category_name = params[:category]
+    category = Category.find_by(name: category_name)
+    @task.category = category
+  
     @task.user = current_user
     @task.save!
     redirect_to task_path(@task)

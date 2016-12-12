@@ -1,7 +1,7 @@
 <div class="container" style="width: 320px;">
-  <h2 class="text-center">Health</h2>
+  <h2 class="text-center"><%= @category.name.capitalize %></h2>
 
-  <% current_user.tasks.each do |task| %>
+  <% current_user.tasks.where(category: @category).each do |task| %>
     <div class="task">
     <h4><%= task.name %></h4>
     <div class="progress">
@@ -13,3 +13,4 @@
   </div>
   <% end %>
 </div>
+
