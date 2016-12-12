@@ -3,6 +3,11 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+
+function showValue(newValue) {
+ document.getElementById("range").innerHTML=newValue;
+}
+
 $(function() {
   $(document).ajaxComplete(function(event, xhr, settings) {
 
@@ -12,3 +17,4 @@ $(function() {
   //     xhr.responseText );
   });
 });
+
