@@ -2,16 +2,16 @@
 <div class="page-task">
   <div class="well">
     <div class="title-radio">
-      <h3>What's your task?</h3>
+      <h4>What's your task?</h4>
     </div>
     <%= f.input :name, label: false %>
   </div>
 
   <div class="well text-left">
     <div class="row">
-      <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-10">
+      <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-8">
        <div class="title-radio">
-         <h3>Choose your Beacon</h3>
+         <h4>Choose your Beacon</h4>
          <p>Pssss! Remember to connect your Beacon!</p>
          <div class="form-content-white">
           <%= f.input :beacon, label: false, collection: ["Beacon 1", "Beacon 2", "Beacon 3"], prompt: "Select Beacon"%>
@@ -25,9 +25,10 @@
 
   <div class="well text-left">
     <div class="row">
-      <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-10">
+      <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-8">
        <div class="title-radio">
          <h3>Distance</h3>
+         <p>It's in meters!</p>
        </div>
        <div class="form-content-white">
          <input type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
@@ -40,34 +41,63 @@
 
  <div class="well text-left">
    <div class="row">
-    <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-10">
+    <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-8">
       <div class="title-radio">
        <h3>Frequency</h3>
      </div>
      <div class="form-content-white">
-       <%= f.input :frequency, collection: Task::FREQUENCY_OPTIONS, as: :radio_buttons, label: false %>
-     </div>
-   </div>
- </div>
+       <label for="test">Weekdays</label><br>
+       <br>
+       <label class="myCheckbox">
+        <input type="checkbox" name="test"/>
+        <span>M</span>
+        <input type="checkbox" name="test"/>
+        <span>Tu</span>
+        <input type="checkbox" name="test"/>
+        <span>W</span><br>
+        <input type="checkbox" name="test"/>
+        <span>Th</span>
+        <input type="checkbox" name="test"/>
+        <span>F</span>
+        <input type="checkbox" name="test"/>
+        <span>Sat</span><br>
+        <input type="checkbox" name="test"/>
+        <span>Sun</span>
+      </label>
+    </div>
+  </div>
+</div>
 
- <div class="well text-left">
+<div class="well text-left">
   <div class="row">
-    <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-10">
+    <div class="col-md-offset-3 col-md-6   col-xs-offset-2 col-xs-8">
       <div class="title-radio">
        <h3>Time Slot</h3>
+       <br>
      </div>
      <div class="form-content-white">
-       <%= f.input :time_slot, collection: Task::TIME_SLOT_OPTIONS, as: :radio_buttons, label: false %>
-     </div>
-   </div>
- </div>
+      <label for="test">You want to be reminded in the... </label>
+      <br>
+      <label class="myCheckbox">
+        <input type="checkbox" name="test"/>
+        <span>Morning</span><br>
+        <input type="checkbox" name="test"/>
+        <span>Afternoon</span><br>
+        <input type="checkbox" name="test"/>
+        <span>Evening</span><br>
+      </label>
+
+    </div>
+  </div>
+</div>
 </div>
 
 
 
+<% unless @task.category %>
 <div class="well text-left">
   <div class="row">
-    <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-10">
+    <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-8">
       <div class="title-radio">
        <h3>Category</h3>
      </div>
@@ -77,8 +107,9 @@
    </div>
  </div>
 </div>
+<% end %>
 
-<div class="form-content-white">
+<div class="form-content-white text-center">
   <%= f.hint 'It all starts with the intention!' %>
 </div>
 

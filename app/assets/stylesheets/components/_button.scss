@@ -34,3 +34,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.create-task, btn, btn-primary, show-task-button {
+   &:hover{ background-color: RGBA(253, 162, 142, 1.00);}
+}
