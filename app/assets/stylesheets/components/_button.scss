@@ -1,0 +1,36 @@
+.sign {
+  height: 35px;
+  width: 140px;
+  font-size: 14px;
+  margin: auto;
+  display: block;
+  border-radius: 20px;
+  color: #999999;
+  border: 0px solid #FFFFFF;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 35px rgba(254, 129, 108, 0.90),
+              -1px 2px 10px 6px rgba(0, 0, 0, 0.1) inset;
+              // h-pos v-pos (blur) (spread) (color) (inset);
+
+}
+
+.log {
+  display: absolute;
+  margin-top: 500px;
+}
+
+.connect {
+  padding-top: 273px;
+}
+
+.button {
+  padding-top: 40px;
+}
+
+.sign-shadow {
+  color: #9B9B9B;
+  display: block;
+  padding-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+}

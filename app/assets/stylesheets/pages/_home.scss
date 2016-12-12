@@ -1,7 +1,6 @@
-
-
-
-body{margin-top:20px;}
+body {
+  margin-top:0px;
+}
 
 .alert {
   border-radius: 0;
@@ -153,4 +152,77 @@ body{margin-top:20px;}
   border-color: #ca452e;
   background: #da4932;
 }
+
+
+////////////// Background CSS //////////////
+.sam-shadow {
+  position: absolute;
+  margin: auto;
+  padding-top: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.arrow {
+  display: block;
+  padding-top: 590px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bounce {
+    animation: bounce 0.9s ease 6;
+}
+
+
+////////////// FLEX DISPLAY //////////////
+
+.flexbox {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: column;
+}
+
+.flex-item {
+  flex: 0 0 40%;
+  height: 40px;
+}
+
+////////////// SCREENS //////////////
+
+#screen-1 {
+  width: 100%;
+  height: 667px;
+  background: linear-gradient( 0deg, #FF6A51, #C33920);
+}
+
+#screen-2 {
+  width: 100%;
+  height: 667px;
+  margin-top: -2px;
+  background: linear-gradient( 0deg, #FFA48D, #FF6A51);
+}
+
+#screen-3 {
+  width: 100%;
+  height: 669px;
+  margin-top: -2px;
+  background: linear-gradient( 0deg, #F8B7A8, #FFA48D);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
