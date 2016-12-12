@@ -7,3 +7,7 @@
     </div>
   </div>
 <% end %>
+
+    unless current_user
+      redirect_to dashboard_index_path
+    end

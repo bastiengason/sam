@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Sam Assistant</title>
-    <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= favicon_link_tag 'sam-favicon.png' %>
-  </head>
-  <body>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    <% unless params["controller"] == "pages" %>
+<head>
+  <title>Sam Assistant</title>
+  <%= csrf_meta_tags %>
+  <%= action_cable_meta_tag %>
+  <%= render 'layouts/meta_tags'%>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= favicon_link_tag 'sam-favicon.png' %>
+</head>
+<body>
+  <%= render 'shared/flashes' %>
+  <%= yield %>
+  <% unless params["controller"] == "pages" %>
     <%= render 'shared/navbar' %>
-    <% end %>
-    <%= javascript_include_tag 'application' %>
-  </body>
+  <% end %>
+  <%= javascript_include_tag 'application' %>
+</body>
 </html>
