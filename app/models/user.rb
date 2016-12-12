@@ -26,4 +26,15 @@ class User < ApplicationRecord
     end
     total_score / category_tasks.size
   end
+
+  def score_color(category)
+    if category_score(category) < 30
+      "#FC5252"
+    elsif category_score(category) >= 30 && category_score(category) < 70
+      "#F5A623"
+    else
+      "#50E3C2"
+    end
+  end
+
 end
