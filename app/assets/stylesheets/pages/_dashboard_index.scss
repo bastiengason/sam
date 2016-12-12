@@ -1,5 +1,9 @@
 body {
-  font-family: 'Maven Pro', sans-serif;
+  font-family: $base-font;
+}
+
+h1, h1, h2, h3, h4, h5, p {
+  color: #1A1A1A;
 }
 
 .donutchart {
