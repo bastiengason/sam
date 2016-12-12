@@ -61,7 +61,7 @@
         <p class="settings_link"><%= link_to '<i class="fa fa-cog" aria-hidden="true"></i> Modify your name'.html_safe, edit_profile_path %></p>
 
   </div>
-
+<%= link_to "bye", destroy_user_session_path, :method => :delete %>
 </body>
 </html>
 
