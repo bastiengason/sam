@@ -1,35 +1,77 @@
-<div class="container">
+<html>
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Category", "Score"],
+        <%= raw(current_user.categories.map do |category|
+          "['#{category.name}',#{current_user.category_score(category)}]"
+        end.join(","))
+        %>
+        ]);
 
-  <h1><%= greet %> <%= current_user.user_name %></h1>
+      var options = {
+        pieHole: 0.4,
+        legend: 'none'
+      };
 
-  <div class="vertical-graph">
-    <% current_user.categories.each do |category| %>
-    <div class="progress progress-bar-vertical">
-      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="min-width: 1em; width: 200em;height: <%= current_user.category_score(category) %>%; background-color: <%#= task.score_color %>;">
-        <%= current_user.category_score(category) %>%
-      <%= link_to category.name, dashboard_category_path(category) %>
+      var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+
+
+  <div class="container">
+      <h1 class='greeting'><%= greet %> <%= current_user.user_name %>!</h1>
+    <div class="donutchart">
+
+      <div id="donutchart" style="width: 100%; height: 200px;"></div>
+    </div>
+<!--     <div class="vertical-graph">
+      <%# current_user.categories.each do |category| %>
+      <div class="progress progress-bar-vertical">
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="min-width: 1em; width: 200em;height: <%#= current_user.category_score(category) %>%; background-color: <%#= task.score_color %>;">
+          <%#= current_user.category_score(category) %>%
+          <%#= link_to category.name, dashboard_category_path(category) %>
+        </div>
       </div>
+      <%# end %>
+    </div> -->
+
+    <div class="reminder_list text-center">
+      <p class='remind'>Later on, I will remind you to:</p>
+      <div class="tasks">
+        <div class="container">
+            <% current_user.tasks.each do |task|%>
+          <div class="row">
+            <ul class='list_tasks'>
+            <div class="col-xs-12">
+                <li class='list_task'><%= link_to task.name, task_path(task) %></li>
+              </div>
+          </div>
+            </ul>
+            <% end %>
+        </div>
       </div>
-    <% end %>
+    </div>
+
+
+    <div class="goodbye text-center">
+      <p><%= goodbye %></p>
+      <p class="signature">Sam</p>
+    </div>
+
+        <p class="settings_link"><%= link_to '<i class="fa fa-cog" aria-hidden="true"></i> Modify your name'.html_safe, edit_profile_path %></p>
+
   </div>
 
-<div class="tasks_list">
-  <p>Later on, I will remind you to:</p>
-  <% current_user.tasks.each do |task|%>
-  <ul>
-    <li><%= task.name %></li>
-  </ul>
-  <% end %>
-  </div>
-
-  <div class="goodbye">
-  <p><%= goodbye %></p>
-  <p class="signature">Sam</p>
-</div>
-  <p><%= link_to "Edit my profile", edit_profile_path %></p>
-
-</div>
-
+</body>
+</html>
 
 
 
