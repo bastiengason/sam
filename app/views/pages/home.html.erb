@@ -26,15 +26,13 @@
 <!-- SCREEN 3 -->
 <div id="screen-3">
   <!-- SIGNIN / SIGNUP BTN -->
-  <div class="button-connect">
-    <div>
-      <%= link_to "Login", new_user_session_path, class: "sign btn" %>
+  <div class="form-positon flexbox">
+    <div class="create-button">
+      <%= link_to "Login", new_user_session_path, class: "sign text-center" %>
     </div>
-    <div class="button">
-      <%= link_to "Create account", new_user_registration_path, class: "sign btn" %>
+    <div class="create-button">
+      <%= link_to "Create account", new_user_registration_path, class: "sign text-center" %>
     </div>
-  </div>
-  <div>
     <%= image_tag("sign-shadow.png", class: "sign-shadow") %>
   </div>
 </div>
