@@ -5,10 +5,12 @@
 .well {
   background-color: transparent;
   border: none;
+  padding: none;
 }
 
 .form-control {
 background-color: RGBA(253, 162, 142, 1.00);
+width: 100%
 
 }
 
@@ -21,7 +23,7 @@ background-color: RGBA(253, 162, 142, 1.00);
 }
 
 .form-control, select, optional {
-  width: 26%;
+  width: 100%;
 }
 
 

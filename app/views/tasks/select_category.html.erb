@@ -4,32 +4,34 @@
     <br>
     <h4>Add a task </h4>
     <h5> Or </h5>
-    <h4>Browse through our category </h4>
+    <h4>Browse through our categories </h4>
   </div>
+
+
 
 
   <div class="row">
     <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-8">
      <%= link_to "Create your task", new_task_path(@task), class: "create-task btn btn-primary show-task-button" %>
-
    </div>
+ </div>
 
 
-   <div class="container">
-    <% @categories.each do |category| %>
+ <div class="container">
+  <% counter = 0 %>
+  <% @categories.each do |category| %>
     <%= link_to new_task_path(category_id: category.id) do  %>
     <div class="row">
-
       <div class="category-block" style="background-color: <%= category_link_color(category) %>">
 
-        <%= link_to category.name, new_task_path(@task, category_id: category.id), class: "create-task btn btn-primary show-task-button" %>
-
-
+          <%= link_to category.name, new_task_path(@task, category_id: category.id), class: "create-task btn btn-primary show-task-button", style: "background-color: #{@colors[counter]} " %>
       </div>
     </div>
+    <br>
     <% end %>
-    <% end %>
-  </div>
+    <% counter += 1 %>
+  <% end %>
+</div>
 
 
 
