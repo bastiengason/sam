@@ -44,6 +44,8 @@ $green-light: #D4F89E;
 
 $gray: #F2F2F2;
 
+$grayform: #F0F0F0;
+
 
 @mixin horizontal-gradient($light, $dark){
   background-image: linear-gradient(-140deg, $dark 0%, $light 100%);
