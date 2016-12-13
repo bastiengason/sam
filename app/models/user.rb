@@ -37,11 +37,11 @@ class User < ApplicationRecord
 
   def score_color(category)
     if category_score(category) < 30
-      "#F96B53"
+      "danger"
     elsif category_score(category) >= 30 && category_score(category) < 70
-      "#F5A623"
+      "warning"
     else
-      "#50E3C2"
+      "success"
     end
   end
 
