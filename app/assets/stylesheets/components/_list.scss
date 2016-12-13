@@ -1,5 +1,5 @@
 
-.reminder_list {
+.reminder-list {
   background-color: #F2F2F2;
   margin: 15px -15px;
   padding: 15px;
@@ -7,7 +7,7 @@
 
 
 
-.list_task {
+.list-task {
   list-style-type: none;
   font-size: 12px;
   font-weight: 300;
@@ -15,7 +15,5 @@
   margin: 5px 0;
   padding: 5px;
   text-align: center;
+  border-left: 3px solid $brand-color;
 }
-
-
-
