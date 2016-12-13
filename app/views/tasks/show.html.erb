@@ -1,4 +1,4 @@
-<div class="show-background text-center">
+<div class=" v-align text-center">
   <h4> So, ready to start to </h4>
   <h4><%= @task.name %> ?</h4><br>
   <p> Great! </p>
@@ -8,21 +8,10 @@
   <p> And your preffered time of <%= @task.time_slot %></p>
   <br>
   <br>
-<div class="text-center">
-<%= link_to "Need to change something?", edit_task_path(@task), class: "btn btn-primary show-task-button" %>
-
-
-
-<%= link_to "Everything good? Ready!", tasks_path(@task), class: "btn btn-primary show-task-button" %><br>
-</div>
-<br>
-<br>
-<br>
-<br>
-
-<h5>“We become what we repeatedly do.”</h5>
-<h5> Sean Covey</h5>
-
-
-
+  <div class="text-center">
+    <%= link_to "Edit your task", edit_task_path(@task), class: "btn btn-primary btn-form" %>
+    <%= link_to "All good? Ready!", tasks_path(@task), class: "btn btn-primary btn-form" %><br>
+  </div>
+  <p>“We become what we repeatedly do.”</p>
+  <p> Sean Covey</p>
 </div>
