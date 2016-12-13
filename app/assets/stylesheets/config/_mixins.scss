@@ -1,0 +1,7 @@
+@mixin horizontal-gradient($light, $dark){
+  background-image: linear-gradient(-140deg, $dark 0%, $light 100%);
+}
+
+@mixin vertical-gradient($light, $dark){
+  background-image: linear-gradient(-135deg, $light 0%, $dark 87%);
+}
