@@ -1,3 +1,4 @@
+
 class TasksController < ApplicationController
 
   def index
@@ -6,6 +7,10 @@ class TasksController < ApplicationController
 
   def new
     @task = Task.new
+    if params[:category_id]
+      @category = Category.find(params[:category_id])
+      @task.category = @category
+    end
   end
 
   def create
@@ -15,7 +20,7 @@ class TasksController < ApplicationController
     category_name = params[:category]
     category = Category.find_by(name: category_name)
     @task.category = category
-  
+
     @task.user = current_user
     @task.save!
     redirect_to task_path(@task)
@@ -43,6 +48,7 @@ class TasksController < ApplicationController
 
   def select_category
     @categories = Category.all
+    @colors = ['#aa00ff', '#0091ea', '#00bfa5', '#00c853', '#ffd600', '#ff6d00']
   end
 
   private

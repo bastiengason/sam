@@ -1,19 +1,30 @@
-<div class="container">
-  <h1> So, ready to start to <%= @task.name %> ?</h1>
-  <p> Great! I'll help by reminding you of it </p>
-  <p> From a distance of <%= @task.distance %></p>
-  <p> A frequency of <%= @task.frequency %></p>
-  <p> At a preffered time of <%= @task.time_slot %></p>
-</div>
-
-
-<div class="container" width="320" >
-
+<div class="show-background text-center">
+  <h4> So, ready to start to </h4>
+  <h4><%= @task.name %> ?</h4><br>
+  <p> Great! </p>
+  <p>I'll reminding you of it </p>
+  <p> At the distance of <%= @task.distance %></p>
+  <p> The frequency of <%= @task.frequency %></p>
+  <p> And your preffered time of <%= @task.time_slot %></p>
+  <br>
+  <br>
+<div class="text-center">
 <%= link_to "Need to change something?", edit_task_path(@task), class: "btn btn-primary show-task-button" %>
 
 
 
-<%= link_to "Everything good? Ready!", tasks_path(@task), class: "btn btn-primary show-task-button" %>
-
+<%= link_to "Everything good? Ready!", tasks_path(@task), class: "btn btn-primary show-task-button" %><br>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h5>“We become what we repeatedly do.”</h5>
+<h5> Sean Covey</h5>
+
+
+
 </div>

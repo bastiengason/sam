@@ -1,18 +1,37 @@
-<div class="category-creation-title" "text-align">
-  <h3><%= current_user.name %> you are about to start!</h3>
-  <h4>Choose a category for your task</h4>
-</div>
+<div class="show-background">
+  <div class="category-creation-title text-align">
+    <h3><%= current_user.name %> you are about to start!</h3>
+    <br>
+    <h4>Add a task </h4>
+    <h5> Or </h5>
+    <h4>Browse through our categories </h4>
+  </div>
 
-<div class="container">
+
+
+
+  <div class="row">
+    <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-8">
+     <%= link_to "Create your task", new_task_path(@task), class: "create-task btn btn-primary show-task-button" %>
+   </div>
+ </div>
+
+
+ <div class="container">
+  <% counter = 0 %>
   <% @categories.each do |category| %>
-  <%= link_to new_task_path(category_id: category.id) do  %>
+    <%= link_to new_task_path(category_id: category.id) do  %>
     <div class="row">
       <div class="category-block" style="background-color: <%= category_link_color(category) %>">
-        <%= category.name %>
+
+          <%= link_to category.name, new_task_path(@task, category_id: category.id), class: "create-task btn btn-primary show-task-button", style: "background-color: #{@colors[counter]} " %>
       </div>
     </div>
-   <% end %>
+    <br>
+    <% end %>
+    <% counter += 1 %>
   <% end %>
 </div>
+
 
 
