@@ -42,6 +42,7 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
+    @category = @task.category
   end
 
   def show
@@ -66,6 +67,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:name, :distance, :time_slot, :frequency, :status, :category_id)
+    params.require(:task).permit(:name, :distance, :time_slot, :frequency, :status, :category_id, :beacon, :duration)
   end
 end
