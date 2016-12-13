@@ -1,20 +1,8 @@
 /* -------------------------------------
  * Fonts
  * ------------------------------------- */
-// Google fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
 $base-font: "Maven Pro", "Helvetica", "sans-serif";
 $header-font: "Raleway", "Helvetica", "sans-serif";
-
-// Local fonts (uncomment following lines)
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
 
 // Font-size and line-height
 $base-size: 16px;
@@ -46,12 +34,34 @@ $gray: #F2F2F2;
 
 $grayform: #F0F0F0;
 
+$graytext: #7E7E7E;
 
-@mixin horizontal-gradient($light, $dark){
-  background-image: linear-gradient(-140deg, $dark 0%, $light 100%);
-}
 
-@mixin vertical-gradient($light, $dark){
-  background-image: linear-gradient(-135deg, $light 0%, $dark 87%);
-}
+/* -------------------------------------
+ * Bootstrap sass variable
+ * (see http://getbootstrap.com/customize/#less-variables)
+ * ------------------------------------- */
 
+// General style
+$font-family-sans-serif:  $base-font;
+$body-bg:                 $gray;
+$font-size-base:          $base-size;
+$line-height-base:        $base-height;
+$headings-font-family:    $header-font;
+
+// Semantic color scheme
+// => http://getbootstrap.com/customize/#colors
+$gray-base:       $gray;
+$brand-primary:   $blue;
+$brand-success:   $green;
+$brand-info:      $yellow-light;
+$brand-danger:    $red;
+$brand-warning:   $yellow;
+
+// Buttons / inputs radius
+$border-radius-base:  2px;
+$border-radius-large: 2px;
+$border-radius-small: 2px;
+
+// Form
+$input-border-focus: $brand-color;
