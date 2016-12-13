@@ -1,31 +1,23 @@
-<div class="navbar">
-  <div class="navbar-item">
-    <%= link_to dashboard_index_path(@user) do %>
-      <i class='fa fa-home  fa-2x'></i>
-    <% end %>
-  </div>
-  <div class="navbar-item">
-    <%= link_to tasks_select_category_path(@user) do %>
-      <i class='fa fa-plus-circle  fa-2x'></i>
-    <% end %>
-  </div>
-  <div class="navbar-item">
-    <%= link_to profile_path(@user) do %>
-      <i class='fa fa-bell  fa-2x'></i>
-    <% end %>
-  </div>
-</div>
+<% unless params["controller"] == "pages" %>
+  <% if user_signed_in? %>
 
+    <div class="navbar">
+      <div class="navbar-item">
+        <%= link_to dashboard_index_path(@user) do %>
+          <i class='fa fa-home fa-fw fa-2x'></i>
+        <% end %>
+      </div>
+      <div class="navbar-item">
+        <%= link_to tasks_select_category_path(@user) do %>
+          <i class='fa fa-plus-circle fa-fw fa-2x'></i>
+        <% end %>
+      </div>
+      <div class="navbar-item">
+        <%= link_to profile_path(@user) do %>
+          <i class='fa fa-bell fa-fw fa-2x'></i>
+        <% end %>
+      </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+  <% end %>
+<% end %>

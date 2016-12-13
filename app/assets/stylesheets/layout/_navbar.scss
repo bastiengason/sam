@@ -6,22 +6,27 @@
   z-index: 1;
   width: 100%;
   display: flex;
-  background-color: #FF654A;
-  //background: linear-gradient(150deg, #ED3A19, #FF654A);
+  background-color: $brand-color;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-item {
   flex: 0 0 33%;
-  cursor: pointer;
-  padding: 0 20px;
-  align-items: center;
-  justify-content: space-between;
   text-align: center;
+
+  a {
+    padding: 20px;
+    color: white;
+    display: block;
+    transition: transform 100ms ease-in-out;
+    &:hover,
+    &:focus {
+      transform: scale(1.5);
+    }
+  }
 }
 
 .nav-buttons {
   flex: 0 0 auto;
-
 }
-
-
