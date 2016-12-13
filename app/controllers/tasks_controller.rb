@@ -42,6 +42,7 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find(params[:id])
+    @category = @task.category
   end
 
   def show
@@ -56,7 +57,6 @@ class TasksController < ApplicationController
 
   def select_category
     @categories = Category.all
-    @colors = ['#aa00ff', '#0091ea', '#00bfa5', '#00c853', '#ffd600', '#ff6d00']
   end
 
   private
@@ -66,6 +66,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:name, :distance, :time_slot, :frequency, :status, :category_id)
+    params.require(:task).permit(:name, :distance, :time_slot, :frequency, :status, :category_id, :beacon, :duration)
   end
 end

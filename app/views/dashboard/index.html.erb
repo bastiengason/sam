@@ -29,7 +29,7 @@
   <h1 class='greeting'><%= greet %> <%= current_user.user_name %>!</h1>
 </div>
 <div class="donutchart">
-  <%= link_to '<div id="donutchart" style="width: 100%; height: 200px;"></div'.html_safe, dashboard_categories_path %>
+  <%= link_to '<div id="donutchart"></div>'.html_safe, dashboard_categories_path %>
 </div>
 <div class="container">
 
@@ -55,8 +55,6 @@
     <p><%= goodbye %></p>
     <p class="signature">Sam</p>
   </div>
-
-  <p class="settings_link"><%= link_to '<i class="fa fa-cog" aria-hidden="true"></i> Modify your name'.html_safe, edit_profile_path %></p>
 
 </div>
 <%= link_to "bye", destroy_user_session_path, :method => :delete %>
