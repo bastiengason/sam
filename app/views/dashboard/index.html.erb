@@ -28,23 +28,20 @@
  <div class="hero-banner">
   <h1 class='greeting'><%= greet %> <%= current_user.user_name %>!</h1>
 </div>
+<div class="donutchart">
+  <%= link_to '<div id="donutchart" style="width: 100%; height: 200px;"></div'.html_safe, dashboard_categories_path %>
+</div>
 <div class="container">
-  <div class="donutchart">
-    <%= link_to '<div id="donutchart" style="width: 100%; height: 200px;"></div'.html_safe, dashboard_categories_path %>
 
-
-
-  </div>
-
-  <div class="reminder_list text-center">
+  <div class="reminder-list text-center">
     <p class='remind'>Later on, I will remind you to:</p>
     <div class="tasks">
       <div class="container">
         <% current_user.tasks.each do |task|%>
         <div class="row">
-          <ul class='list_tasks'>
+          <ul class='list-tasks'>
             <div class="col-xs-12">
-              <li class='list_task'><%= link_to task.name, task_path(task) %></li>
+              <li class='list-task'><%= link_to task.name, task_path(task) %></li>
             </div>
           </div>
         </ul>

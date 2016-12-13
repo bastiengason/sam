@@ -21,11 +21,11 @@ class Task < ApplicationRecord
 
   def score_color
     if score < 30
-      "$red-light"
+      "#{$brand-color-light}"
     elsif score >= 30 && score < 70
-      "$yellow-light"
+      "#F5A623"
     else
-      "$turquoise-light"
+      "#50E3C2"
     end
   end
 
