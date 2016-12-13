@@ -1,25 +1,20 @@
-
-
-<div class="navbar navbar-fixed-bottom flexbox">
-<form method="get">
-  <button class="item flex-item" action="/tasks">
-    <i class='fa fa-home  fa-2x'></i>
-  </button>
-  <button class="item flex-item" action="/tasks">
-    <i class='fa fa-plus-circle  fa-2x'></i>
-  </button>
-  <button class="item flex-item" action="/tasks">
-    <i class='fa fa-bell  fa-2x'></i>
-  </button>
-  </form>
+<div class="navbar">
+  <div class="navbar-item">
+    <%= link_to dashboard_index_path(@user) do %>
+      <i class='fa fa-home  fa-2x'></i>
+    <% end %>
+  </div>
+  <div class="navbar-item">
+    <%= link_to tasks_select_category_path(@user) do %>
+      <i class='fa fa-plus-circle  fa-2x'></i>
+    <% end %>
+  </div>
+  <div class="navbar-item">
+    <%= link_to profile_path(@user) do %>
+      <i class='fa fa-bell  fa-2x'></i>
+    <% end %>
+  </div>
 </div>
-
-
-
-
-
-
-
 
 
 
