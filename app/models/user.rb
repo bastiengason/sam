@@ -37,11 +37,11 @@ class User < ApplicationRecord
 
   def score_color(category)
     if category_score(category) < 30
-      "#FC5252"
+      "$red-light"
     elsif category_score(category) >= 30 && category_score(category) < 70
-      "#F5A623"
+      "$yellow-light"
     else
-      "#50E3C2"
+      "$turquoise-light"
     end
   end
 
