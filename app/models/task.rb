@@ -21,11 +21,25 @@ class Task < ApplicationRecord
 
   def score_color
     if score < 30
-      "#FC5252"
+      "#{$brand-color-light}"
     elsif score >= 30 && score < 70
       "#F5A623"
     else
       "#50E3C2"
+    end
+  end
+
+  def evolution
+    if score < 20
+       "plant-growing-1.png"
+    elsif score < 40
+      "plant-growing-2.png"
+    elsif score < 60
+      "plant-growing-3.png"
+    elsif score < 80
+      "plant-growing-4.png"
+    else
+      "plant-growing-5.png"
     end
   end
 

@@ -29,11 +29,11 @@ Task.create(name: "Meditate", category: si, user: User.all.sample)
 Task.create(name: "Plan my work day", category: prod, user: User.all.sample)
 Task.create(name: "Attend networking events", category: prod, user: User.all.sample)
 
-10.times do
+20.times do
   Notification.create(status: "done", task: Task.first)
 end
 
-5.times do
+10.times do
   Notification.create(status: "done", task: Task.last)
 end
 
