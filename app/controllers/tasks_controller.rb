@@ -56,7 +56,6 @@ class TasksController < ApplicationController
 
   def select_category
     @categories = Category.all
-    @colors = ['#aa00ff', '#0091ea', '#00bfa5', '#00c853', '#ffd600', '#ff6d00']
   end
 
   private

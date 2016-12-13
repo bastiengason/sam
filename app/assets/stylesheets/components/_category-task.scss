@@ -1,0 +1,21 @@
+.category-task {
+  &.task-home {
+    @include vertical-gradient($red, $red-light);
+  }
+
+  &.task-health {
+    @include vertical-gradient($turquoise, $turquoise-light);
+  }
+
+  &.task-self-improvement {
+  @include vertical-gradient($blue, $blue-light);
+  }
+
+  &.task-productivity {
+  @include vertical-gradient($yellow, $yellow-light);
+  }
+
+  &.task-other {
+  @include vertical-gradient($green, $green-light);
+  }
+}
