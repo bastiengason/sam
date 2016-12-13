@@ -31,7 +31,7 @@ class Task < ApplicationRecord
 
   def evolution
     if score < 20
-       "plant-growing-1.png"
+      "plant-growing-1.png"
     elsif score < 40
       "plant-growing-2.png"
     elsif score < 60

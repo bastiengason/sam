@@ -1,6 +1,11 @@
 .hero-banner {
-  background-color: red;
+  background-color: $brand-color-light;
   text-align: center;
-  @include horizontal-gradient($brand-color-light, $brand-color);
+  color: white;
+  h1 {
+    color: white;
+    font-size: 20px;
+  }
+  //@include horizontal-gradient($brand-color-light, $brand-color);
   padding: 10px 0;
 }
