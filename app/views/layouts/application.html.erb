@@ -13,9 +13,7 @@
   <body>
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <% unless params["controller"] == "pages" %>
-      <%= render 'shared/navbar' %>
-    <% end %>
+    <%= render 'shared/navbar' %>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>
