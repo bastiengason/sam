@@ -1,16 +1,16 @@
 .sign {
-  height: 35px;
-  width: 140px;
-  font-size: 14px;
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+  padding-top: 10px;
   margin: auto;
+  font-weight: bold;
   display: block;
-  border-radius: 20px;
+  border-radius: 25px;
   color: #999999;
   border: 0px solid #FFFFFF;
   background-color: #FFFFFF;
-  box-shadow: 0px 0px 35px rgba(254, 129, 108, 0.90),
-              -1px 2px 10px 6px rgba(0, 0, 0, 0.1) inset;
-              // h-pos v-pos (blur) (spread) (color) (inset);
+  box-shadow: 0px 0px 35px rgba(254, 129, 108, 0.90);
 }
 
 .log {
@@ -18,7 +18,7 @@
   margin-top: 500px;
 }
 
-.connect {
+.button-connect {
   padding-top: 273px;
 }
 
@@ -36,4 +36,23 @@
 
 .create-task, btn, btn-primary, show-task-button {
    &:hover{ background-color: RGBA(253, 162, 142, 1.00);}
+}
+
+.btn {
+  color: white;
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: $brand-color;
+  border-radius: 4px;
+  border: solid 0px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.60);
+}
+
+.btn-form {
+  height: 45px;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }

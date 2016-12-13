@@ -1,0 +1,31 @@
+h1, h1, h2, h3, h4, h5, p {
+  font-family: $base-font;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1A1A1A;
+}
+
+p {
+  font-size: 16px;
+  font-family: $base-font;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+
+.greeting {
+  font-size: 20px;
+  color: #1A1A1A;
+}
+
+p.remind {
+  color: #1A1A1A;
+}
+
+.goodbye {
+  margin-bottom: 50px;
+}

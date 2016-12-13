@@ -15,4 +15,3 @@ To create a branch
 git checkout -b mybranch
 git push origin mybranch
 
-g
