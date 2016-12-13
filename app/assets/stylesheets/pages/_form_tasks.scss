@@ -39,7 +39,8 @@
 
 /////////////// IS THIS A CORRECT THING ? ///////////////
 .form-positon {
-  margin-top: 100px;
+  display: inline-block;
+  height: 100vh;
 }
 
 
@@ -59,7 +60,7 @@
 
 .label {
   font-weight: light;
-
+}
 .align-center {
   margin-left: 10vh;
   margin-right: 10vh;
@@ -67,9 +68,22 @@
 
 .flexbox {
   display: flex;
+  align-item: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .flex-item {
   flex: 0 0 70%;
+}
+
+.or-login {
+  margin-top: 25px;
+  a {
+    color: gray;
+  }
 
 }
+
+
+
