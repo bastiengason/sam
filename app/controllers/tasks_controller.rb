@@ -11,15 +11,23 @@ class TasksController < ApplicationController
       @category = Category.find(params[:category_id])
       @task.category = @category
     end
+
   end
 
   def create
     @task = Task.new(task_params)
 
 
-    category_name = params[:category]
-    category = Category.find_by(name: category_name)
-    @task.category = category
+    if params[:category]
+      category_name = params[:category]
+      category = Category.find_by(name: category_name)
+      @task.category = category
+    end
+
+    if params[:task][:category]
+      @category = Category.find(params[:task][:category])
+      @task.category = @category
+    end
 
     @task.user = current_user
     @task.save!

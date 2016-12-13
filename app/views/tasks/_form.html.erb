@@ -94,7 +94,9 @@
 
 
 
-<% unless @task.category %>
+<% if @task.category %>
+   <%= f.input :category, :as => :hidden, :input_html => { :value => @category.id } %>
+<% else %>
 <div class="well text-left">
   <div class="row">
     <div class="col-md-offset-5 col-md-7   col-xs-offset-2 col-xs-8">
