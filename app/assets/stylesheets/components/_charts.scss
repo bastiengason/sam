@@ -1,5 +1,7 @@
 .donutchart {
   background-color: #ffffff;
+  width: 100%;
+  height: 200px;
 }
 
 .progress-bar-vertical {
@@ -16,4 +18,3 @@
   height: 0;
   transition: height 0.6s ease;
 }
-
