@@ -5,7 +5,7 @@
 
 // General style
 $font-family-sans-serif:  $base-font;
-$body-bg:                 white;
+$body-bg:                 $gray;
 $font-size-base:          $base-size;
 $line-height-base:        $base-height;
 $headings-font-family:    $header-font;
@@ -15,11 +15,12 @@ $headings-font-family:    $header-font;
 $gray-base:       $gray;
 $brand-primary:   $blue;
 $brand-success:   $green;
-$brand-info:      $yellow;
+$brand-info:      $yellow-light;
 $brand-danger:    $red;
-$brand-warning:   $orange;
+$brand-warning:   $yellow;
 
 // Buttons / inputs radius
 $border-radius-base:  2px;
 $border-radius-large: 2px;
 $border-radius-small: 2px;
+
