@@ -55,7 +55,7 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to tasks_index_path
+    redirect_to dashboard_index_path(@user)
   end
 
   def select_category
