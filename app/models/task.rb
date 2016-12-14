@@ -43,6 +43,9 @@ class Task < ApplicationRecord
     end
   end
 
+
+
+
   def motivation_sentence
     if score < 30
       "That's a good start!"
