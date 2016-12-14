@@ -42,7 +42,9 @@
           <div class="row">
               <div class="col-xs-12">
                 <ul class='list-tasks'>
-                  <li class='list-task border-task border-<%= task.category.name %>'><%= link_to task.name, task_path(task) %></li>
+                  <li class='list-task border-task border-<%= task.category.name %>'>
+                    <%= link_to task.name, task_path(task), :class => 'color-text' %>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -50,8 +52,8 @@
         </div>
       </div>
     </div>
-    <div class="goodbye text-center">
-      <p><%= goodbye %></p>
+    <div class="text-center">
+      <p class="goodbye"><%= goodbye %></p>
       <p class="signature">Sam</p>
     </div>
   </div>
