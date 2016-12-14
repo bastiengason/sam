@@ -15,11 +15,11 @@ Category.destroy_all
 User.create(email: "anne@aol.com", name: "annela", password: "alalal")
 User.create(email: "hello@sam.be", name: "Bastien", password: "samsam")
 
-home = Category.create(name: "home")
-health = Category.create(name: "health")
-si = Category.create(name: "self-improvement")
-prod = Category.create(name: "productivity")
-other = Category.create(name: "other")
+home = Category.create(name: "Home")
+health = Category.create(name: "Health")
+si = Category.create(name: "Self-improvement")
+prod = Category.create(name: "Productivity")
+other = Category.create(name: "Other")
 
 Task.create(name: "Water the plants", category: home, user: User.all.sample)
 Task.create(name: "Practice yoga", category: health, user: User.all.sample)
