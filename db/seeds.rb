@@ -12,7 +12,7 @@ User.destroy_all
 Category.destroy_all
 
 
-User.create(email: "anne@aol.com", name: "annela", password: "alalal")
+User.create(email: "anne@aol.com", name: "Anne-Laure", password: "alalal")
 User.create(email: "hello@sam.be", name: "Bastien", password: "samsam")
 
 
@@ -32,15 +32,16 @@ other = Category.create(
   name: "Other"
 )
 
-Task.create(name: "Water the plants", category: home, user: User.first)
-Task.create(name: "Practice yoga", category: health, user: User.first)
-Task.create(name: "Do fitness", category: health, user: User.first)
-Task.create(name: "Deeply breathe", category: health, user: User.first)
-Task.create(name: "Drink water", category: health, user: User.first)
-Task.create(name: "Meditate", category: si, user: User.first)
-Task.create(name: "Plan my work day", category: prod, user: User.first)
-Task.create(name: "Attend networking events", category: prod, user: User.first)
-
+Task.create(name: "Water the plants", category: home, user: User.first, beacon: "Bedroom", duration: 40, distance: 1)
+puts "Yay, first task created!"
+Task.create(name: "Practice yoga", category: health, user: User.first, beacon: "Bedroom", duration: 40, distance: 1)
+Task.create(name: "Do fitness", category: health, user: User.first, beacon: "Bedroom", duration: 40, distance: 1)
+Task.create(name: "Deeply breathe", category: health, user: User.first, beacon: "Bedroom", duration: 40, distance: 1)
+Task.create(name: "Drink water", category: health, user: User.first, beacon: "Bedroom", duration: 40, distance: 1)
+Task.create(name: "Meditate", category: si, user: User.first, beacon: "Bedroom", duration: 40, distance: 1)
+Task.create(name: "Plan my work day", category: prod, user: User.first, beacon: "Bedroom", duration: 40, distance: 1)
+Task.create(name: "Attend networking events", category: prod, user: User.first, beacon: "Bedroom", duration: 40, distance: 1)
+puts "Yay, last task created!"
 
 20.times do
   Notification.create(status: "done", task: Task.first)
