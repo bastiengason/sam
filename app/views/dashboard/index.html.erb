@@ -31,7 +31,7 @@
   <div class="donutchart">
     <%= link_to '<div id="donutchart"></div>'.html_safe, dashboard_categories_path %>
   </div>
-  <div class="container">
+  <div class="container fullscroll">
     <div class="reminder-list text-center">
       <p class='remind'>Later on, I will remind you to:</p>
       <div class="tasks">
@@ -54,7 +54,6 @@
       <p class="signature">Sam</p>
     </div>
   </div>
-  <%= link_to "bye", destroy_user_session_path, :method => :delete %>
 </body>
 </html>
 
