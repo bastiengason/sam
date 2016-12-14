@@ -4,7 +4,7 @@ class Task < ApplicationRecord
   has_many :notifications
   validates :name, presence: { :message => "You need to enter a task! " }
   validates :beacon, presence: { :message => "You need to choose a beacon! " }
-  validates :frequency, presence: { :message => "I need a day of the week " }
+  validates :frequency, presence: { :message => "I need a day of the week !" }
   validates :distance, presence: { :message => "Choose a distance for your beacon" }
   validates :name, presence: { :message => "You need to enter a task! " }
 
