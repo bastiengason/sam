@@ -25,15 +25,17 @@
   </script>
 </head>
 <body>
+
   <div class="hero-banner">
     <h1 class='greeting'><%= greet %> <%= current_user.user_name %>!</h1>
   </div>
+     <div id="notif_results"></div>
   <div class="donutchart">
     <%= link_to '<div id="donutchart"></div>'.html_safe, dashboard_categories_path %>
   </div>
   <div class="container fullscroll">
     <div class="reminder-list text-center">
-      <p class='remind'>Later on, I will remind you to:</p>
+      <p class='remind'><%= link_to "Later", notif_notifications_path, remote: true %> on, I will remind you to:</p>
       <div class="tasks">
         <div class="container">
           <% current_user.tasks.each do |task|%>
@@ -52,7 +54,11 @@
     <div class="goodbye text-center">
       <p><%= goodbye %></p>
       <p class="signature">Sam</p>
+
+
     </div>
+
+
   </div>
 </body>
 </html>
