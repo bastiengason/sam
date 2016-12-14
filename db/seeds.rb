@@ -16,11 +16,26 @@ User.create(email: "anne@aol.com", name: "annela", password: "alalal")
 User.create(email: "hello@sam.be", name: "Bastien", password: "samsam")
 
 
-home = Category.create(name: "Home")
-health = Category.create(name: "Health")
-si = Category.create(name: "Self-improvement")
-prod = Category.create(name: "Productivity")
-other = Category.create(name: "Other")
+home = Category.create(
+  name: "Home",
+  icon: "fa-home"
+)
+health = Category.create(
+  name: "Health",
+  icon: "fa-medkit"
+)
+si = Category.create(
+  name: "Self-improvement",
+  icon: "fa-star"
+)
+prod = Category.create(
+  name: "Productivity",
+  icon: "fa-hourglass-start"
+)
+other = Category.create(
+  name: "Other",
+  icon: "fa-plus"
+)
 
 Task.create(name: "Water the plants", category: home, user: User.first)
 Task.create(name: "Practice yoga", category: health, user: User.first)
