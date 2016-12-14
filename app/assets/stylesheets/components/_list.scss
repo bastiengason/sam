@@ -14,7 +14,7 @@
   background-color: white;
   margin: 5px 0;
   text-align: center;
-  border-left: 3px solid $brand-color;
+  //border-left: 3px solid $brand-color;
 }
 
 .tasks {
@@ -28,3 +28,40 @@
 ul, menu, dir {
     -webkit-padding-start: 0px !important;
 }
+
+.border-task {
+  &.border-Home {
+    border-left: 6px solid $red;
+  }
+
+  &.border-Health {
+    border-left: 6px solid $turquoise;
+  }
+
+  &.border-Self-improvement {
+  border-left: 6px solid $blue;
+  }
+
+  &.border-Productivity {
+  border-left: 6px solid $yellow;
+  }
+
+  &.border-Other {
+  border-left: 6px solid $green;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
