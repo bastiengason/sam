@@ -20,12 +20,12 @@
   height: 10em;
   transition: height 0.6s ease;
   &.success {
-    background-color: $green;
+    background-color: $turquoise-light;
   }
   &.warning {
-    background-color: $yellow;
+    background-color: $yellow-light;
   }
   &.danger {
-    background-color: $brand-color;
+    background-color: $brand-color-light;
   }
 }

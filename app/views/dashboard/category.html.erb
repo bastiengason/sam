@@ -2,27 +2,27 @@
   <h2><%= @category.name.capitalize %></h2>
 </div>
 
-<div class="container">
+<div class="container fullscroll">
   <div class="tasks">
     <% current_user.tasks.where(category: @category).each do |task| %>
     <div class="task">
-      <h4><%= task.name %></h4>
+    <h4 class="categories"><%= task.name %></h4>
       <div class="progress">
         <div class="progress-bar <%= task.score_color %>" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <%= task.score %>%;">
           <%= task.score %>%
         </div>
       </div>
       <p><%= task.motivation_sentence %></p>
+      <%#= image_tag task.evolution %>
     </div>
     <% end %>
-    <div class="text-center">
-      <%= image_tag current_user.evolution %>
-    </div>
   </div>
-
-  <%= link_to dashboard_categories_path, class: 'btn btn-default' do %>
-    <i class="fa fa-chevron-left"></i>
-    Back
+  <div class="text-center">
+    <%= image_tag evolution(current_user.category_score(@category)) %>
+    <%#= current_user.tasks.where(category: @category).each {|task| task.evolution } %>
+  </div>
+  <%= link_to dashboard_categories_path, class: 'btn btn-form' do %>
+  <i class="fa fa-chevron-left"></i>
+  Back
   <% end %>
 </div>
-

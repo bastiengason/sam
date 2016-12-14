@@ -11,7 +11,7 @@ class Task < ApplicationRecord
 
 
   def score
-    current_score = notifications.where(status: "done").size * 3
+    current_score = notifications.where(status: "done").size
     if current_score >= 100
       100
     else
@@ -26,20 +26,6 @@ class Task < ApplicationRecord
       "warning"
     else
       "success"
-    end
-  end
-
-  def evolution
-    if score < 20
-      "plant-growing-1.png"
-    elsif score < 40
-      "plant-growing-2.png"
-    elsif score < 60
-      "plant-growing-3.png"
-    elsif score < 80
-      "plant-growing-4.png"
-    else
-      "plant-growing-5.png"
     end
   end
 
