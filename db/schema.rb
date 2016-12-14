@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20161213165231) do
 
   create_table "tasks", force: :cascade do |t|
     t.string   "name"
-    t.string   "distance"
+    t.integer  "distance"
     t.string   "frequency"
     t.string   "time_slot"
     t.string   "status"

@@ -41,7 +41,6 @@
 /////////////// IS THIS A CORRECT THING ? ///////////////
 .form-positon {
 
-  margin-top: 100px;
 }
 
 .btn, btn-default {
@@ -71,13 +70,7 @@
     margin-right: 10vh;
   }
 
-  .flexbox {
-    display: flex;
-  }
 
-  .flex-item {
-    flex: 0 0 70%;
- }
 
  .space {
   margin-top: 20px;
@@ -85,16 +78,10 @@
 
 
 
-.flexbox {
-  display: flex;
-  align-item: center;
-  flex-direction: column;
-  justify-content: center;
-}
 
-.flex-item {
-  flex: 0 0 70%;
-}
+// .flex-item {
+//   flex: 0 0 70%;
+// }
 
 .or-login {
   margin-top: 25px;
