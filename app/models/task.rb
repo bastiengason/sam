@@ -5,7 +5,7 @@ class Task < ApplicationRecord
 
 
   DISTANCE_OPTIONS = ["Less than 1 meter", "1 to 3 meters", "3 to 5 meters", "more than 5 meter"]
-  FREQUENCY_OPTIONS = ["Everyday", "Every two days", "Three times a week", "Two times a week"]
+  FREQUENCY_OPTIONS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
   TIME_SLOT_OPTIONS = ["Morning", "Afternoon", "Evening"]
 
 
@@ -21,7 +21,7 @@ class Task < ApplicationRecord
 
   def score_color
     if score < 30
-      "#{$brand-color-light}"
+      "#AAAAAA"
     elsif score >= 30 && score < 70
       "#F5A623"
     else
@@ -31,7 +31,7 @@ class Task < ApplicationRecord
 
   def evolution
     if score < 20
-       "plant-growing-1.png"
+      "plant-growing-1.png"
     elsif score < 40
       "plant-growing-2.png"
     elsif score < 60

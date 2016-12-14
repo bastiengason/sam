@@ -1,13 +1,11 @@
 body {
-  margin-top:0px;
+  margin-top: 0px;
 }
 
 .alert {
   border-radius: 0;
-  -webkit-border-radius: 0;
   box-shadow: 0 1px 2px rgba(0,0,0,0.11);
   display: table;
-  // width: 100%;
   position: 19px;
 }
 
@@ -28,12 +26,10 @@ body {
 
 .alert-white.rounded {
   border-radius: 3px;
-  -webkit-border-radius: 3px;
 }
 
 .alert-white.rounded .icon {
   border-radius: 3px 0 0 3px;
-  -webkit-border-radius: 3px 0 0 3px;
 }
 
 .alert-white .icon {
@@ -55,10 +51,9 @@ body {
   text-align: center;
   width: 25px;
   height: 100%;
-  position: Absolute;
+  position: absolute;
   top: 0px;
   right: 40px;
-  // border: 1px solid #bdbdbd;
   padding-top: 15px;
 }
 
@@ -67,7 +62,7 @@ body {
   text-align: center;
   width: 25px;
   height: 100%;
-  position: Absolute;
+  position: absolute;
   top: 0px;
   right: 10px;
   // border: 1px solid #bdbdbd;
@@ -76,10 +71,6 @@ body {
 
 
 .alert-white .icon:after {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
   display: block;
   content: '';
@@ -158,7 +149,7 @@ body {
 .sam-shadow {
   position: absolute;
   margin: auto;
-  padding-top: 20px;
+  padding-top: 10px;
   top: 0;
   left: 0;
   right: 0;
@@ -221,17 +212,3 @@ body {
   margin-top: -2px;
   background: linear-gradient( 0deg, #F8B7A8, #FFA48D);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

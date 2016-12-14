@@ -1,5 +1,6 @@
 .navbar {
   position: fixed;
+  height: 11vh;
   left: 0px;
   bottom: 0px;
   margin: 0px;
@@ -14,7 +15,6 @@
 .navbar-item {
   flex: 0 0 33%;
   text-align: center;
-
   a {
     padding: 20px;
     color: white;

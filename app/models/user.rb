@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-
   has_many :tasks
   has_many :notifications, through: :tasks
 
@@ -58,5 +57,4 @@ class User < ApplicationRecord
       "plant-growing-5.png"
     end
   end
-
 end
