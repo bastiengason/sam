@@ -17,24 +17,19 @@ User.create(email: "hello@sam.be", name: "Bastien", password: "samsam")
 
 
 home = Category.create(
-  name: "Home",
-  icon: "fa-home"
+  name: "Home"
 )
 health = Category.create(
-  name: "Health",
-  icon: "fa-medkit"
+  name: "Health"
 )
 si = Category.create(
-  name: "Self-improvement",
-  icon: "fa-star"
+  name: "Self-improvement"
 )
 prod = Category.create(
-  name: "Productivity",
-  icon: "fa-hourglass-start"
+  name: "Productivity"
 )
 other = Category.create(
-  name: "Other",
-  icon: "fa-plus"
+  name: "Other"
 )
 
 Task.create(name: "Water the plants", category: home, user: User.first)
