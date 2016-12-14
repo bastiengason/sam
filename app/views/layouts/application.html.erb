@@ -7,9 +7,12 @@
     <%= render 'layouts/meta_tags'%>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Maven+Pro|Raleway' %>
     <%= favicon_link_tag 'sam-favicon.png' %>
+    <link rel="apple-touch-icon" href="sam-favicon.png" />
   </head>
   <body>
     <%= render 'shared/flashes' %>
