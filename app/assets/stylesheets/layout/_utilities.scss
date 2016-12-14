@@ -32,6 +32,10 @@ body {
   background: #3b5998;
 }
 
+html {
+  min-height: 100vh;
+}
+
 label {
   font-weight: 300;
 }

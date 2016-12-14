@@ -1,5 +1,4 @@
 module ProfileHelper
-
   def greet
     now = Time.now
     today = Date.today.to_time
@@ -11,13 +10,13 @@ module ProfileHelper
     tomorrow = today.tomorrow
 
     if (morning..noon).cover? now
-      'Good Morning'
+      'Good morning'
     elsif (noon..evening).cover? now
-      'Good Afternoon'
+      'Good afternoon'
     elsif (evening..night).cover? now
-      'Good Evening'
+      'Good evening'
     elsif (night..tomorrow).cover? now
-      'Good Night'
+      'Good night'
     end
   end
 
@@ -41,5 +40,4 @@ module ProfileHelper
       'Have a restful night!'
     end
   end
-
 end

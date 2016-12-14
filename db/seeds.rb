@@ -13,6 +13,7 @@ Category.destroy_all
 
 
 User.create(email: "anne@aol.com", name: "annela", password: "alalal")
+User.create(email: "hello@sam.be", name: "Bastien", password: "samsam")
 
 home = Category.create(name: "Home")
 health = Category.create(name: "Health")

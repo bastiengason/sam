@@ -11,12 +11,10 @@ class TasksController < ApplicationController
       @category = Category.find(params[:category_id])
       @task.category = @category
     end
-
   end
 
   def create
     @task = Task.new(task_params)
-
 
     if params[:category]
       category_name = params[:category]
