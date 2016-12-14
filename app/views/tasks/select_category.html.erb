@@ -5,7 +5,10 @@
       <%= link_to new_task_path(@task, category_id: category), class: "" do %>
         <div class="container-fluid">
           <div class="row v-align">
-            <div class="col-xs-3">ICON</div>
+            <div class="col-xs-3">
+              <i class="fa <%= category.icon_self %>"></i>
+              <!-- <i class="fa fa-battery-quarter"></i> -->
+            </div>
             <div class="col-xs-9">
               <h3 class="btn-link"> <%= category.name.capitalize %></h3>
             </div>
