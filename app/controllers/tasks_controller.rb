@@ -28,8 +28,12 @@ class TasksController < ApplicationController
     end
 
     @task.user = current_user
-    @task.save!
-    redirect_to task_path(@task)
+
+    if @task.save
+      redirect_to task_path(@task)
+    else
+      render 'new'
+    end
   end
 
   def update
