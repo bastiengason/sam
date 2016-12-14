@@ -26,17 +26,17 @@ class Task < ApplicationRecord
 
   def score_color
     if score < 30
-      "#AAAAAA"
+      "danger"
     elsif score >= 30 && score < 70
-      "#F5A623"
+      "warning"
     else
-      "#50E3C2"
+      "success"
     end
   end
 
   def evolution
     if score < 20
-       "plant-growing-1.png"
+      "plant-growing-1.png"
     elsif score < 40
       "plant-growing-2.png"
     elsif score < 60
