@@ -1,16 +1,19 @@
 <% counter = 0 %>
-<% @categories.each do |category| %>
-  <div class="category-task task-<%= category.name %>">
-    <%= link_to new_task_path(@task, category_id: category), class: "" do %>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-4">ICONNNNNN</div>
-          <div class="col-xs-8">
-            <h2> <%= category.name %></h2>
+<div class="flexbox fullscreen">
+  <% @categories.each do |category| %>
+    <div class="category-task task-<%= category.name %> flex-item-cat">
+      <%= link_to new_task_path(@task, category_id: category), class: "" do %>
+        <div class="container-fluid">
+          <div class="row v-align">
+            <div class="col-xs-3">ICON</div>
+            <div class="col-xs-9">
+              <h3 class="btn-link"> <%= category.name.capitalize %></h3>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-  <% counter += 1 %>
-<% end %>
+      <% end %>
+    </div>
+    <% counter += 1 %>
+  <% end %>
+</div>
+
