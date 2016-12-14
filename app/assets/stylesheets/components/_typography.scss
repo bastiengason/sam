@@ -31,7 +31,8 @@ p.remind {
 }
 
 .goodbye {
-  margin-bottom: 50px;
+  font-size: 20px;
+  color: $graytext;
 }
 
 .sam-desc {
@@ -40,7 +41,8 @@ p.remind {
 
 .signature {
   font-size: 22px;
+  color: $graytext;
   font-style: italic;
   font-weight: bold;
-  padding-bottom: 70px;
+  padding-bottom: 120px;
 }

@@ -3,12 +3,9 @@
   <h4><%= @task.name %> ?</h4><br>
   <p> Great! </p>
   <p>I'll reminding you of it </p>
-  <br>
   <p><%= @task.frequency %></p>
   <p> In the <%= @task.time_slot %></p>
   <p> At the distance of <%= @task.distance %></p>
-  <br>
-  <br>
   <div class="text-center">
     <%= link_to "Edit your task", edit_task_path(@task), class: "btn btn-primary btn-form" %>
     <%= link_to "All good? Ready!", dashboard_index_path, class: "btn btn-primary btn-form" %>
