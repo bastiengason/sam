@@ -1,3 +1,7 @@
+<!-- <% if @task.errors.any? %>
+  <%= @task.errors.messages %>
+<% end %>  !-->
+
 <%= simple_form_for @task do |f| %>
 <div class="form-content-white">
   <div class="page-task">
@@ -9,7 +13,7 @@
     </div>
   </div>
 </div>
-
+<%= @task.errors[:name] if @task.errors.key? :name %>
 <div class="well text-left">
   <div class="row">
     <div class="col-md-offset-5 col-md-7   col-xs-12">
@@ -21,7 +25,7 @@
            <p>Pssss! Remember to connect your Beacon!</p>
          </div>
          <div class="form-content-white space">
-           <%= f.input :beacon, label: false, collection: ["Beacon 1", "Beacon 2", "Beacon 3"], placeholder: "Select Your Beacon" %>
+           <%= f.input :beacon, label: false, collection: ["Beacon 1", "Beacon 2", "Beacon 3"], placeholder: "Select Your Beacon", :required => true %>
          </div>
        </div>
      </div>
@@ -41,6 +45,7 @@
            <p>It's in meters!</p>
          </div>
        </div>
+       <%= @task.errors[:distance] if @task.errors.key? :distance %>
        <div class="form-content-white space">
          <input name="task[distance]" type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
          <span id="range">0</span>
@@ -108,7 +113,7 @@
 
 
 <% if @task.category %>
-<%= f.input :category, :as => :hidden, :input_html => { :value => @category.id } %>
+<%= f.input :category, :as => :hidden, :input_html => { :value => @task.category.id } %>
 <% else %>
 <div class="well text-left">
   <div class="row">

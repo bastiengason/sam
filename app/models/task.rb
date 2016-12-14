@@ -2,6 +2,10 @@ class Task < ApplicationRecord
   belongs_to :user
   belongs_to :category
   has_many :notifications
+  validates :name, presence: { :message => "You need to enter a task! " }
+  validates :frequency, presence: { :message => "I need a day of the week " }
+  validates :distance, presence: { :message => "Choose a distance for your beacon" }
+
 
 
   DISTANCE_OPTIONS = ["Less than 1 meter", "1 to 3 meters", "3 to 5 meters", "more than 5 meter"]

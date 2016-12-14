@@ -17,7 +17,6 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
 
-
     if params[:category]
       category_name = params[:category]
       category = Category.find_by(name: category_name)
@@ -30,8 +29,12 @@ class TasksController < ApplicationController
     end
 
     @task.user = current_user
-    @task.save!
-    redirect_to task_path(@task)
+
+    if @task.save
+      redirect_to task_path(@task)
+    else
+      render 'new'
+    end
   end
 
   def update
