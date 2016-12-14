@@ -40,12 +40,12 @@
         <div class="container">
           <% current_user.tasks.each do |task|%>
           <div class="row">
-            <ul class='list-tasks'>
               <div class="col-xs-12">
-                <li class='list-task'><%= link_to task.name, task_path(task) %></li>
+                <ul class='list-tasks'>
+                  <li class='list-task'><%= link_to task.name, task_path(task) %></li>
+                </ul>
               </div>
             </div>
-          </ul>
           <% end %>
         </div>
       </div>
