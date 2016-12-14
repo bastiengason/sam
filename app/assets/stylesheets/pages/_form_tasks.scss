@@ -14,51 +14,35 @@
 }
 
 .form-control {
-<<<<<<< HEAD
-<<<<<<< HEAD
   color: black;
-background-color: #F2F2F2;
-width: 100%;
-
-=======
+  background-color: #F2F2F2;
+  width: 100%;
   background-color: RGBA(253, 162, 142, 1.00);
   width: 100%;
->>>>>>> master
-=======
-  color: black;
-
-  background-color: RGBA(253, 162, 142, 1.00);
-  width: 100%;
-
->>>>>>> master
 }
 
-.form-content-white {
-  color: black ;
-}
 
-.form-control, select, optional {
-  width: 70%;
-  height: 45px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
-  color: $graytext;
-  background-color: white;
-  border: 0px;
-  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.06);
-}
+  .form-content-white {
+    color: black ;
+  }
+
+  .form-control, select, optional {
+    width: 70%;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    color: $graytext;
+    background-color: white;
+    border: 0px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.06);
+  }
 
 /////////////// IS THIS A CORRECT THING ? ///////////////
 .form-positon {
   margin-top: 100px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 .btn, btn-default {
 
  margin-top: 20px;
@@ -75,25 +59,21 @@ width: 100%;
 
 .label {
   font-weight: light;
-<<<<<<< HEAD
-=======
-=======
+ }
 
->>>>>>> master
-.align-center {
-  margin-left: 10vh;
-  margin-right: 10vh;
-}
+  .align-center {
+    margin-left: 10vh;
+    margin-right: 10vh;
+  }
 
-.flexbox {
-  display: flex;
-}
+  .flexbox {
+    display: flex;
+  }
 
-.flex-item {
-  flex: 0 0 70%;
-<<<<<<< HEAD
->>>>>>> master
-=======
+  .flex-item {
+    flex: 0 0 70%;
+ }
 
->>>>>>> master
-}
+ .space {
+  margin-top: 20px;
+ }
