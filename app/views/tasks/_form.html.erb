@@ -1,133 +1,124 @@
 <%= simple_form_for @task do |f| %>
-<div class="form-content-white">
-  <div class="page-task">
-    <div class="well">
-      <div class="title-radio">
-        <h4>What's your task?</h4>
-      </div>
-      <%= f.input :name, label: false %>
-    </div>
-  </div>
-</div>
-
-<div class="well text-left">
-  <div class="row">
-    <div class="col-md-offset-5 col-md-7   col-xs-12">
-     <div class="title-radio">
-       <div class="form-content-white">
-         <div class="text-center">
-           <h4>Choose your Beacon</h4>
-           <p>Pssss! Remember to connect your Beacon!</p>
-         </div>
-         <div class="form-content-white">
-         <%= f.input :beacon, label: false, collection: ["Beacon 1", "Beacon 2", "Beacon 3"], placeholder: "Select Your Beacon"%>
+  <div class="form-content-white">
+    <div class="page-task">
+      <div class="well">
+        <div class="title-radio">
+          <h4>What's your task?</h4>
         </div>
+        <%= f.input :name, label: false %>
       </div>
     </div>
   </div>
-</div>
-
-
-
-<div class="well text-left">
-  <div class="row">
-    <div class="col-md-offset-5 col-md-7   col-xs-12">
-     <div class="title-radio">
-       <div class="form-content-white">
-         <div class="text-center">
-           <h3>Distance</h3>
-           <p>It's in meters!</p>
-         </div>
-       </div>
-       <div class="form-content-white">
-         <input name="task[distance]" type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
-         <span id="range">0</span>
-       </div>
-     </div>
-   </div>
- </div>
-
-
- <div class="well text-left">
-   <div class="row">
-    <div class="col-md-offset-5 col-md-7   col-xs-12">
-      <div class="title-radio">
-        <div class="form-content-white">
-          <div class="text-center">
-           <h3>Frequency</h3>
-           <div class="form-content-white">
-             <p>Weekdays</p>
-             <br>
-             <%= f.input :frequency, collection: Task::FREQUENCY_OPTIONS, as: :radio_buttons, label: false %>
-          </div>
-        </div>
-        <br>
-      </div>
-    </div>
-  </div>
-
-  <div class="well text-left">
-  <div class="row">
-    <div class="col-md-offset-5 col-md-7   col-xs-12">
-     <div class="title-radio">
-       <div class="form-content-white">
-         <div class="text-center">
-           <h4>For how long?</h4>
-           <p>You can choose up to 60 days!</p>
-         </div>
-         <div class="form-content-white">
-         <%= f.input :duration, label: false, collection: 1..60, placeholder: "Select Your Beacon"%>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
   <div class="well text-left">
     <div class="row">
-      <div class="col-md-offset-3 col-md-6   col-xs-12">
-        <div class="title-radio">
-          <div class="text-center">
-           <h3>Time Slot</h3>
-           <br>
-           <p>You want to be reminded in the... </p>
-           <br>
-            <%= f.input :time_slot, collection: Task::TIME_SLOT_OPTIONS, as: :radio_buttons, label: false %>
-          </label>
+      <div class="col-md-offset-5 col-md-7   col-xs-12">
+       <div class="title-radio">
+         <div class="form-content-white">
+           <div class="text-center">
+             <h4>Choose your Beacon</h4>
+             <p>Pssss! Remember to connect your Beacon!</p>
+           </div>
+           <div class="form-content-white">
+           <%= f.input :beacon, label: false, collection: ["Bathroom", "Kitchen", "Bedroom"], placeholder: "Select Your Beacon"%>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-
-
-<% if @task.category %>
-<%= f.input :category, :as => :hidden, :input_html => { :value => @category.id } %>
-<% else %>
-<div class="well text-left">
-  <div class="row">
-    <div class="col-md-offset-5 col-md-7   col-xs-12">
-      <div class="title-radio">
-        <div class="text-center">
-         <h3>Category</h3>
-         <%= f.association :category, as: :radio_buttons, label: false%>
+  <div class="well text-left">
+    <div class="row">
+      <div class="col-md-offset-5 col-md-7   col-xs-12">
+       <div class="title-radio">
+         <div class="form-content-white">
+           <div class="text-center">
+             <h3>Distance</h3>
+             <p>It's in meters!</p>
+           </div>
+         </div>
+         <div class="form-content-white">
+           <input name="task[distance]" type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
+           <span id="range">0</span>
+         </div>
        </div>
      </div>
    </div>
- </div>
-</div>
 
+   <div class="well text-left">
+     <div class="row">
+      <div class="col-md-offset-5 col-md-7   col-xs-12">
+        <div class="title-radio">
+          <div class="form-content-white">
+            <div class="text-center">
+             <h3>Frequency</h3>
+             <div class="form-content-white">
+               <p>Weekdays</p>
+               <br>
+               <%= f.input :frequency, collection: Task::FREQUENCY_OPTIONS, as: :radio_buttons, label: false %>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="well text-left">
+    <div class="row">
+      <div class="col-md-offset-5 col-md-7   col-xs-12">
+       <div class="title-radio">
+         <div class="form-content-white">
+           <div class="text-center">
+             <h4>For how long?</h4>
+             <p>You can choose up to 60 days!</p>
+           </div>
+           <div class="form-content-white">
+           <%= f.input :duration, label: false, collection: 1..60, placeholder: "Select Your Beacon"%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="well text-left">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6   col-xs-12">
+          <div class="title-radio">
+            <div class="text-center">
+             <h3>Time Slot</h3>
+             <br>
+             <p>You want to be reminded in the... </p>
+             <br>
+              <%= f.input :time_slot, collection: Task::TIME_SLOT_OPTIONS, as: :radio_buttons, label: false %>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <% if @task.category %>
+    <%= f.input :category, :as => :hidden, :input_html => { :value => @category.id } %>
+    <% else %>
+    <div class="well text-left">
+      <div class="row">
+        <div class="col-md-offset-5 col-md-7   col-xs-12">
+          <div class="title-radio">
+            <div class="text-center">
+             <h3>Category</h3>
+             <%= f.association :category, as: :radio_buttons, label: false%>
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+  <% end %>
+
+  <div class="text-center form-content-white ">
+    <%= f.hint 'It all starts with the intention!', class: "form-content-white" %>
+  </div>
+
+  <div class='submit-task form-content-white'>
+    <%= f.button :submit, class: 'btn-form' %>
+  </div>
 <% end %>
-
-
-<div class="text-center form-content-white ">
-  <%= f.hint 'It all starts with the intention!', class: "form-content-white" %>
-</div>
-
-<div class='submit-task form-content-white'>
- <%= f.button :submit %>
-</div>
-
-<% end %>
-</div>
