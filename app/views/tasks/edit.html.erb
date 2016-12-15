@@ -1,6 +1,7 @@
- <div class="container text-center">
-   <h1><%= greet %></h1>
-   <h1>Edit your task, <%= current_user.user_name %></h1>
-   <%= render "form" %>
+<div class="hero-banner">
+  <h1 class="greeting"><%= greet %></h1>
 </div>
+<h1 class="task-title text-center">Edit your task, <%= current_user.user_name %></h1>
+<%= render "form" %>
+
 
