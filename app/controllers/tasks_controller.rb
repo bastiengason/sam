@@ -8,6 +8,7 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
     @task.beacon = "Bathroom"
+    @task.duration = "30"
     if params[:category_id]
       @category = Category.find(params[:category_id])
       @task.category = @category

@@ -55,19 +55,17 @@
 
     <!-- CREATE BUTTON -->
     <div class="text-center end-box">
-     <%= f.button :submit, class: "btn-form" %>
+     <%= f.button :submit, :class => "btn-form" %>
+    </div>
+
+    <!-- CATEGORY -->
+    <div class="box-input">
+      <% if @task.category %>
+        <%= f.input :category, :as => :hidden, :input_html => { :value => @task.category.id } %>
+      <% else %>
+        <h4 class="title-input">Category</h4>
+        <%= f.association :category, as: :radio_buttons, label: false%>
+      <% end %>
     </div>
   <% end %>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
