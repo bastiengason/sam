@@ -1,11 +1,12 @@
-<div class=" v-align text-center">
-  <h4> So, ready to start to </h4>
-  <h4><%= @task.name %> ?</h4><br>
-  <p> Great! </p>
-  <p>I'll reminding you of it </p>
-  <p><%= @task.frequency %></p>
-  <p> In the <%= @task.time_slot %></p>
-  <p> At the distance of <%= @task.distance %></p>
+<div class=" v-align">
+  <div class="box-input">
+    <h4 class="text-center"> So, ready to start to </h4>
+    <h4 class="text-center"><%= @task.name %> ?</h4><br>
+    <p class="text-center"> Great! </p>
+    <p class="text-recap">I'll reminding you of it <%= @task.frequency %></p>
+    <p class="text-recap"> In the <%= @task.time_slot %></p>
+    <p class="text-recap"> At the distance of <%= @task.distance %></p>
+  </div>
   <div class="text-center">
     <%= link_to "Edit your task", edit_task_path(@task), class: "btn btn-primary btn-form" %>
     <%= link_to "All good? Ready!", dashboard_index_path, class: "btn btn-primary btn-form" %>
@@ -14,6 +15,8 @@
           :class => 'btn-link' %>
       </p>
   </div>
-  <p>“We become what we repeatedly do.”</p>
-  <p> Sean Covey</p>
+  <div class="quote">
+    <p class="quote-string">“We become what we repeatedly do.”</p>
+    <p class="quote-signature">Sean Covey</p>
+  </div>
 </div>
