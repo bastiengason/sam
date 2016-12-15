@@ -1,5 +1,5 @@
 <div class="hero-banner">
-  <h2><%= @category.name.capitalize %></h2>
+  <h1><%= @category.name.capitalize %></h1>
 </div>
 
 <div class="container fullscroll">
@@ -12,7 +12,7 @@
           <%= task.score %>%
         </div>
       </div>
-      <p><%= task.motivation_sentence %></p>
+      <p class="text-center motivation-sentence"><%= task.motivation_sentence %></p>
       <%#= image_tag task.evolution %>
     </div>
     <% end %>
@@ -22,7 +22,7 @@
     <%#= current_user.tasks.where(category: @category).each {|task| task.evolution } %>
   </div>
   <div class="text-center">
-    <%= link_to dashboard_categories_path, class: 'btn btn-form' do %>
+    <%= link_to dashboard_categories_path, class: 'btn btn-form btn-back' do %>
     <i class="fa fa-chevron-left"></i>
     Back
     <% end %>

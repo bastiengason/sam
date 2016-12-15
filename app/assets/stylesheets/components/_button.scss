@@ -65,6 +65,13 @@
 }
 
 
+.btn-danger-zone {
+  background-color: $brand-color-light;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  padding-top: 8px;
+}
+
+
 .container-button {
   width: 100vh;
 }
@@ -95,7 +102,11 @@
 }
 
 
-
+.btn-back {
+  max-width: 35%;
+  padding-top: 8px;
+  margin-top: 100px;
+}
 
 
 
