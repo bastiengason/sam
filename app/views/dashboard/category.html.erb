@@ -22,7 +22,7 @@
     <%#= current_user.tasks.where(category: @category).each {|task| task.evolution } %>
   </div>
   <div class="text-center">
-    <%= link_to dashboard_categories_path, class: 'btn btn-form' do %>
+    <%= link_to dashboard_categories_path, class: 'btn btn-form btn-back' do %>
     <i class="fa fa-chevron-left"></i>
     Back
     <% end %>
