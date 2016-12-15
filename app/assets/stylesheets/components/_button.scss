@@ -61,12 +61,16 @@
   margin-right: auto;
   border-radius: 25px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  &:active {
-    background-color: $brand-color
-  }
-  &:focus {
-    background-color: $brand-color
-  }
+  // &:hover {
+  //   background-color: $brand-color
+  // }
+
+  // &:active {
+  //   background-color: $brand-color;
+  // }
+  // &:focus {
+  //   background-color: $brand-color
+  // }
 
 }
 
