@@ -35,7 +35,7 @@
 }
 
 .create-task, btn, btn-primary, show-task-button {
-   &:hover{ background-color: RGBA(253, 162, 142, 1.00);}
+ &:hover{ background-color: RGBA(253, 162, 142, 1.00);}
 }
 
 
@@ -49,11 +49,11 @@
   border: solid 0px;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.60);
 
- }
+}
 
 
 
-.btn-form,
+
 .btn-form {
   height: 45px;
   font-size: 20px;
@@ -61,8 +61,19 @@
   margin-right: auto;
   border-radius: 25px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  // &:hover {
+  //   background-color: $brand-color
+  // }
+
+  // &:active {
+  //   background-color: $brand-color;
+  // }
+  // &:focus {
+  //   background-color: $brand-color
+  // }
 
 }
+
 
 
 .btn-danger-zone {
@@ -88,9 +99,9 @@
 
 .btn-link:hover
 {
-     color: white;
-     text-decoration:none;
-     cursor:pointer;
+ color: white;
+ text-decoration:none;
+ cursor:pointer;
 }
 
 .fullscreen {
