@@ -15,23 +15,23 @@ a {
 
 a .link:active
 {
-     text-decoration:none;
-     cursor:pointer;
+ text-decoration:none;
+ cursor:pointer;
 }
 
 a .link:visited
 {
-     text-decoration:none;
-     cursor:pointer;
+ text-decoration:none;
+ cursor:pointer;
 }
 
 .link:focus {
+  color: #1A1A1A;
+  text-decoration: none;
+  &:hover{
     color: #1A1A1A;
     text-decoration: none;
-    &:hover{
-      color: #1A1A1A;
-      text-decoration: none;
-    }
+  }
 }
 
 p {
@@ -99,19 +99,20 @@ p.remind {
   font-size: 30px;
 }
 
+.inspiration-quote {
+  &:before, {
+    font-family: "FontAwesome";
+    font-size: 20px;
+    content: "\f10d";
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  &:after {
+    font-family: "FontAwesome";
+    content: "\f10e";
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
+}

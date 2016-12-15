@@ -52,7 +52,7 @@ module ApplicationHelper
       }]
 
     quote = quotes.sample
-   raw("&quot;#{quote[:content]}&quot; <br><i>- #{quote[:author]}</i>")
+   raw("<div class='inspiration-quote'>#{quote[:content]}</div><i>– #{quote[:author]}</i>")
  end
 
 end
