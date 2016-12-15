@@ -10,14 +10,14 @@
 
     <!-- SELECT BEACON -->
     <div class="box-input">
-      <h4 class="title-input">Select your Beacon</h4>
+      <h4 class="title-input">Select your beacon:</h4>
       <%= f.input :beacon, label: false, collection: ["Bathroom", "Kitchen", "Bedroom"] %>
       <p class="tips text-center">*Pssss! Remember to connect your Beacon!</p>
     </div>
 
     <!-- SET A DISTANCE -->
     <div class="box-input">
-      <h4 class="title-input">Distance</h4>
+      <h4 class="title-input">Set a distance:</h4>
       <%= @task.errors[:distance] if @task.errors.key? :distance %>
       <div class="beacon-range">
         <input name="task[distance]" type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
@@ -27,7 +27,7 @@
 
     <!-- SET A FREQUENCY -->
     <div class="box-input">
-      <h4 class="title-input">Frequency</h4>
+      <h4 class="title-input">Set a frequency:</h4>
       <div class="radio-size">
         <%= f.input :frequency, collection: Task::FREQUENCY_OPTIONS, as: :radio_buttons, label: false %>
       </div>
@@ -41,7 +41,7 @@
 
     <!-- TIME SLOT -->
     <div class="box-input">
-      <h4 class="title-input">Time Slot</h4>
+      <h4 class="title-input">Time Slot:</h4>
       <p class="text-form">When do you want your notifications?</p>
       <div class="radio-size">
         <%= f.input :time_slot, collection: Task::TIME_SLOT_OPTIONS, as: :radio_buttons, label: false %>
