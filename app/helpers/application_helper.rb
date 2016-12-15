@@ -19,8 +19,8 @@ module ApplicationHelper
         content: "Shovel today's challenges for your tomorrow's freedom."
       },
       {
-        author: "Aniekee Tochukwu Ezekiel",
-        content: "Shovel today's challenges for your tomorrow's freedom."
+        author: "Aporva Kala",
+        content: "What are we but the some total of our habits and lifestyle."
       },
       {
         author: "Jim Ryun",
@@ -35,21 +35,32 @@ module ApplicationHelper
         content: "A system is only as effective as your level of commitment to it."
       },
       {
-        author: "Aniekee Tochukwu Ezekiel",
-        content: "Shovel today's challenges for your tomorrow's freedom."
+        author: "Clifford Cohen",
+        content: "Chronic problems tend to come from chronic habits."
       },
       {
-        author: "Aniekee Tochukwu Ezekiel",
-        content: "Shovel today's challenges for your tomorrow's freedom."
+        author: "Og Mandino",
+        content: "Good habits are the key to all success. Bad habits are the unlocked door to failure."
       },
       {
-        author: "Aniekee Tochukwu Ezekiel",
-        content: "Shovel today's challenges for your tomorrow's freedom."
+        author: "Chris Matakas",
+        content: "Systems and processes will always surpass motivation."
       },
       {
         author: "Julien Smith",
         content: "Everything you are used to, once done long enough, starts to seem natural, even though it might not be."
-      }]
+      },
+    {
+        author: "Gretchen Rubin",
+        content: "I should pursue only those habits that would make me feel freer and stronger."
+      },
+    {
+        author: "Richard J. Foster",
+        content: "Spiritual disciplines answer the shallow world."
+        },
+      ]
+
+
 
     quote = quotes.sample
    raw("<div class='inspiration-quote'>#{quote[:content]}</div><i>– #{quote[:author]}</i>")

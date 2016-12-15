@@ -86,7 +86,7 @@ p.remind {
 
 .word-task {
   color: $brand-color;
-  font-weight: bold;
+  font-weight: bold
 }
 
 .motivation-sentence {
@@ -100,19 +100,24 @@ p.remind {
 }
 
 .inspiration-quote {
-  &:before, {
-    font-family: "FontAwesome";
-    font-size: 20px;
-    content: "\f10d";
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
+  position: relative;
+  padding: 50px;
+  &:before,
   &:after {
     font-family: "FontAwesome";
-    content: "\f10e";
-    font-size: 20px;
-    margin-left: 10px;
+    font-size: 25px;
+    position: absolute;
+  }
+  &:before {
     margin-top: 10px;
+    content: "\f10d";
+    left: 10px;
+    top: 10px;
+  }
+  &:after {
+    content: "\f10e";
+    left: 300px;
+    bottom: 15px;
 
   }
 }
