@@ -15,23 +15,23 @@ a {
 
 a .link:active
 {
-     text-decoration:none;
-     cursor:pointer;
+ text-decoration:none;
+ cursor:pointer;
 }
 
 a .link:visited
 {
-     text-decoration:none;
-     cursor:pointer;
+ text-decoration:none;
+ cursor:pointer;
 }
 
 .link:focus {
+  color: #1A1A1A;
+  text-decoration: none;
+  &:hover{
     color: #1A1A1A;
     text-decoration: none;
-    &:hover{
-      color: #1A1A1A;
-      text-decoration: none;
-    }
+  }
 }
 
 p {
@@ -86,7 +86,7 @@ p.remind {
 
 .word-task {
   color: $brand-color;
-  font-weight: bold;
+  font-weight: bold
 }
 
 .motivation-sentence {
@@ -99,19 +99,25 @@ p.remind {
   font-size: 30px;
 }
 
+.inspiration-quote {
+  position: relative;
+  padding: 50px;
+  &:before,
+  &:after {
+    font-family: "FontAwesome";
+    font-size: 25px;
+    position: absolute;
+  }
+  &:before {
+    margin-top: 10px;
+    content: "\f10d";
+    left: 10px;
+    top: 10px;
+  }
+  &:after {
+    content: "\f10e";
+    left: 300px;
+    bottom: 15px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
+}
