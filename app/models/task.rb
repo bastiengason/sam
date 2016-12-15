@@ -37,11 +37,11 @@ class Task < ApplicationRecord
     if score < 30
       "That's a good start!"
     elsif score >= 30 && score < 70
-      "You're getting closer to make " + name.downcase + " an habit. Keep going! "
+      "You're getting closer to make it a habit. Keep going! "
     elsif score >= 70 && score < 100
-      "You're close to make " + name.downcase + " an habit, good job!"
+      "You're close to make it a habit, good job!"
     else
-      "Yay, you made " + name.downcase + " an habit. Well done!"
+      "Yay, you made " + name.downcase + " a habit. Well done!"
     end
   end
 
