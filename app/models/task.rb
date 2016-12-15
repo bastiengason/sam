@@ -6,6 +6,7 @@ class Task < ApplicationRecord
   # validates :beacon, presence: { :message => "You need to choose a beacon! " }
   # validates :frequency, presence: { :message => "I need a day of the week !" }
   # validates :distance, presence: { :message => "Choose a distance for your beacon" }
+  # validations are in comments because the seeds don't fit the validations
 
 
 
