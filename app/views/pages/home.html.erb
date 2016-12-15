@@ -14,20 +14,7 @@
 <!-- SCREEN 2 -->
 <div id="screen-2">
   <!-- DESCRIPTION -->
-  <div>
-    <p class="sam-desc">Hi, I'm Sam, your next smart personal assistant.</p>
-    <p class="sam-desc">My goal is to help you to create new good habits. And of keep them forever.</p>
-  </div>
-  <!-- ARROW 2 -->
-  <%= link_to '#screen-3' do %>
-    <%= image_tag("arrow_down_1x.png", class: "arrow") %>
-  <% end %>
-</div>
-
-<!-- SCREEN 3 -->
-<div id="screen-3" class="flexbox">
-  <!-- SIGNIN / SIGNUP BTN -->
-  <div class="form-positon flexbox">
+<div class="form-positon flexbox boom2">
     <div class="create-button">
       <%= link_to "Login", new_user_session_path, class: "sign text-center" %>
     </div>
@@ -37,5 +24,4 @@
     <%= image_tag("sign-shadow.png", class: "sign-shadow") %>
   </div>
 </div>
-
 
