@@ -25,11 +25,10 @@
 
     <div class="section lg text-center">
       <h4>Danger zone</h4>
-      <p class="btn btn-default btn-form">
+      <p class="btn btn-default btn-form btn-danger-zone">
         <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, :class => 'btn-link' %>
       </p>
-
-      <p class="btn btn-default btn-form">
+      <p class="btn btn-default btn-form btn-danger-zone">
         <%= link_to "Logout", destroy_user_session_path, :method => :delete, :class => 'btn-link' %>
       </p>
     </div>
