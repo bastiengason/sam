@@ -21,8 +21,10 @@
     <%= image_tag evolution(current_user.category_score(@category)) %>
     <%#= current_user.tasks.where(category: @category).each {|task| task.evolution } %>
   </div>
-  <%= link_to dashboard_categories_path, class: 'btn btn-form' do %>
-  <i class="fa fa-chevron-left"></i>
-  Back
-  <% end %>
+  <div class="text-center">
+    <%= link_to dashboard_categories_path, class: 'btn btn-form' do %>
+    <i class="fa fa-chevron-left"></i>
+    Back
+    <% end %>
+  </div>
 </div>

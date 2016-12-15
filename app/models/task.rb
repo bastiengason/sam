@@ -14,8 +14,6 @@ class Task < ApplicationRecord
   FREQUENCY_OPTIONS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
   TIME_SLOT_OPTIONS = ["Morning", "Afternoon", "Evening"]
 
-
-
   def score
     current_score = notifications.where(status: "done").size
     if current_score >= 100

@@ -1,162 +1,71 @@
-<!-- <% if @task.errors.any? %>
-  <%= @task.errors.messages %>
-<% end %>  !-->
+<div class="form-positon fullscroll">
+  <!-- START CREATION OF A TASK -->
+  <%= simple_form_for @task do |f| %>
 
-<%= simple_form_for @task do |f| %>
-<div class="form-content-white">
-  <div class="page-task">
-    <div class="well">
-      <div class="title-radio">
-        <h4>What's your task?</h4>
-      </div>
+    <!-- TASK NAME -->
+    <div class="box-input">
+      <h4 class="title-input">What's your task?</h4>
       <%= f.input :name, label: false %>
     </div>
-  </div>
-</div>
-<!-- <%= @task.errors[:name] if @task.errors.key? :name %> !-->
 
-  <div class="well text-left">
-    <div class="row">
-      <div class="col-md-offset-5 col-md-7 col-xs-12">
-       <div class="title-radio">
-         <div class="form-content-white">
-           <div class="text-center">
-             <h4>Choose your Beacon</h4>
-             <p>Pssss! Remember to connect your Beacon!</p>
-           </div>
-           <div class="form-content-white">
-           <%= f.input :beacon, label: false, collection: ["Bathroom", "Kitchen", "Bedroom"] %>
-          </div>
-        </div>
-      </div>
+    <!-- SELECT BEACON -->
+    <div class="box-input">
+      <h4 class="title-input">Select your beacon:</h4>
+      <%= f.input :beacon, label: false, collection: ["Bathroom", "Kitchen", "Bedroom"] %>
+      <p class="tips text-center">*Pssss! Remember to connect your Beacon!</p>
     </div>
-  </div>
 
- <div class="well text-left">
-  <div class="row">
-    <div class="col-md-offset-5 col-md-7   col-xs-12">
-     <div class="title-radio">
-       <div class="form-content-white">
-         <div class="text-center">
-           <h3>Distance</h3>
-           <br>
-           <p>It's in meters!</p>
-         </div>
-       </div>
-       <%= @task.errors[:distance] if @task.errors.key? :distance %>
-       <div class="form-content-white space">
-         <input name="task[distance]" type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
-         <span id="range">0</span>
-       </div>
-     </div>
-   </div>
- </div>
-
-
-
-   <div class="well text-left">
-
-     <div class="row">
-      <div class="col-md-offset-5 col-md-7 col-xs-12">
-        <div class="title-radio">
-          <div class="form-content-white">
-            <div class="text-center">
-             <h3>Frequency</h3>
-             <div class="form-content-white">
-               <p>Weekdays</p>
-               <br>
-               <%= f.input :frequency, collection: Task::FREQUENCY_OPTIONS, as: :radio_buttons, label: false %>
-            </div>
-          </div>
-          <br>
-        </div>
+    <!-- SET A DISTANCE -->
+    <div class="box-input">
+      <h4 class="title-input">Set a distance:</h4>
+      <%= @task.errors[:distance] if @task.errors.key? :distance %>
+      <div class="beacon-range">
+        <input name="task[distance]" type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
+        <p class="text-form"><span id="range">0</span> meters</p>
       </div>
     </div>
 
-    <div class="well text-left">
-      <div class="row">
-        <div class="col-md-offset-5 col-md-7 col-xs-12">
-         <div class="title-radio">
-           <div class="form-content-white">
-             <div class="text-center">
-               <h4>For how long?</h4>
-               <p>You can choose up to 60 days!</p>
-             </div>
-             <div class="form-content-white">
-             <%= f.input :duration, label: false, collection: 1..60, placeholder: "Select Your Beacon"%>
-            </div>
-          </div>
-        </div>
+    <!-- SET A FREQUENCY -->
+    <div class="box-input">
+      <h4 class="title-input">Set a frequency:</h4>
+      <div class="radio-size">
+        <%= f.input :frequency, collection: Task::FREQUENCY_OPTIONS, as: :radio_buttons, label: false %>
       </div>
     </div>
 
-  </div>
+    <!-- DURATION OF THE TASK -->
+    <div class="box-input">
+      <h4 class="title-input">For how long?</h4>
+      <%= f.input :duration, label: false, collection: 1..100 %>
+    </div>
 
-  <% if @task.category %>
-    <%= f.input :category, :as => :hidden, :input_html => { :value => @category.id } %>
-    <% else %>
-    <div class="well text-left">
-      <div class="row">
-        <div class="col-md-offset-5 col-md-7 col-xs-12">
-          <div class="title-radio">
-            <div class="text-center">
-             <h3>Category</h3>
-             <%= f.association :category, as: :radio_buttons, label: false%>
+    <!-- TIME SLOT -->
+    <div class="box-input">
+      <h4 class="title-input">Time Slot:</h4>
+      <p class="text-form">When do you want your notifications?</p>
+      <div class="radio-size">
+        <%= f.input :time_slot, collection: Task::TIME_SLOT_OPTIONS, as: :radio_buttons, label: false %>
+      </div>
+    </div>
 
-           </div>
-         </div>
-       </div>
-       <br>
-     </div>
-   </div>
-   <% end %>
+    <!-- QUOTE -->
+    <div class="text-center box-input">
+      <%= f.hint '"It all starts with the intention!"', :class => "quote" %>
+    </div>
 
-   <div class="well text-left">
-    <div class="row">
-      <div class="col-md-offset-3 col-md-6   col-xs-12">
-        <div class="title-radio">
-          <div class="text-center">
-           <h3>Time Slot</h3>
-           <br>
-           <p>When do you want your notifications ? </p>
-           <br>
-           <%= f.input :time_slot, collection: Task::TIME_SLOT_OPTIONS, as: :radio_buttons, label: false %>
-         </label>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
+    <!-- CREATE BUTTON -->
+    <div class="text-center end-box">
+     <%= f.button :submit, :class => "btn-form" %>
+    </div>
 
-
-
-<% if @task.category %>
-<%= f.input :category, :as => :hidden, :input_html => { :value => @task.category.id } %>
-<% else %>
-<div class="well text-left">
-  <div class="row">
-    <div class="col-md-offset-5 col-md-7   col-xs-12">
-      <div class="title-radio">
-        <div class="text-center">
-         <h3>Category</h3>
-         <br>
-         <%= f.association :category, as: :radio_buttons, label: false%>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
-
-<% end %>
-
-
-<div class="text-center form-content-white ">
-  <%= f.hint 'It all starts with the intention!', class: "form-content-white" %>
-</div>
-
-<div class='submit-task form-content-white'>
- <%= f.button :submit, class: "btn-form" %>
-</div>
-
-<% end %>
+    <!-- CATEGORY -->
+    <div class="box-input">
+      <% if @task.category %>
+        <%= f.input :category, :as => :hidden, :input_html => { :value => @task.category.id } %>
+      <% else %>
+        <h4 class="title-input">Category</h4>
+        <%= f.association :category, as: :radio_buttons, label: false%>
+      <% end %>
+    </div>
+  <% end %>
 </div>

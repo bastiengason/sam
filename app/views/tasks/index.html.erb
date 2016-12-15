@@ -1,24 +1,9 @@
 <div class="container text-center">
-<h1>Your habits so far</h1>
-<br>
-<p> Click on the task to edit it! </p>
-<br>
-<ul>
-
-
-
-<% @tasks.each do |task| %>
-  <li><%= link_to task.name, task %></li>
-<% end %>
-</ul>
-
-
-<!-- <form method="get" action="/tasks/new">
-    <button class="btn btn-primary show-task-button" type="submit">Add a task</button>
-</form>
-
-<form method="get" action="/dashboard/category">
-    <button class="btn btn-primary show-task-button" type="submit">My stats</button>
-</form> -->
+  <h1>Your habits so far</h1>
+  <p> Click on the task to edit it! </p>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li><%= link_to task.name, task %></li>
+    <% end %>
+  </ul>
 </div>
-

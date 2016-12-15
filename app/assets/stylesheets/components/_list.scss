@@ -7,13 +7,18 @@
 .list-task {
   height: 50px;
   list-style-type: none;
-  font-size: 16px;
+  font-size: 20px;
+  padding-top: 10px;
+  width: 100%;
   font-weight: 300;
   background-color: white;
   margin: 5px 0;
-  padding: 5px;
   text-align: center;
-  border-left: 3px solid $brand-color;
+  box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.03);
+}
+
+.color-text {
+  color: $graytext;
 }
 
 .tasks {
@@ -23,3 +28,44 @@
 .categories {
   padding-bottom: 5px;
 }
+
+ul, menu, dir {
+    -webkit-padding-start: 0px !important;
+}
+
+.border-task {
+  &.border-Home {
+    border-left: 6px solid $red;
+  }
+
+  &.border-Health {
+    border-left: 6px solid $turquoise;
+  }
+
+  &.border-Self-improvement {
+  border-left: 6px solid $blue;
+  }
+
+  &.border-Productivity {
+  border-left: 6px solid $yellow;
+  }
+
+  &.border-Other {
+  border-left: 6px solid $green;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
