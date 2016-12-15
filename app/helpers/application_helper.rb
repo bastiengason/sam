@@ -50,7 +50,9 @@ module ApplicationHelper
         author: "Julien Smith",
         content: "Everything you are used to, once done long enough, starts to seem natural, even though it might not be."
       }]
+
     quote = quotes.sample
-    return "#{quote[:content]} #{quote[:author]}"
-  end
+   raw("&quot;#{quote[:content]}&quot; <br><i>- #{quote[:author]}</i>")
+ end
+
 end
