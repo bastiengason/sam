@@ -35,7 +35,7 @@
   </div>
   <div class="container fullscroll">
     <div class="reminder-list text-center">
-      <p class='remind'><%= link_to "Later", notif_notifications_path, remote: true %> on, I will remind you to:</p>
+      <p class='remind'><%= link_to "Later", notif_notifications_path, remote: true , class: "link"%> on, I will remind you to:</p>
       <div class="tasks">
         <div class="container">
           <% current_user.tasks.each do |task|%>
