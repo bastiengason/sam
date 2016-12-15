@@ -21,12 +21,23 @@
   color: $graytext;
 }
 
+
+// .link:focus {
+//     color: #1A1A1A;
+//     text-decoration: none;
+//     &:hover{
+//       color: #1A1A1A;
+//       text-decoration: none;
+//     }
+// }
+
 .tasks {
   margin: 35px 0;
 }
 
 .categories {
   padding-bottom: 5px;
+  padding-top: 10px;
 }
 
 ul, menu, dir {
