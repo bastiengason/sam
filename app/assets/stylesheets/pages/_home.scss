@@ -55,6 +55,7 @@ body {
   top: 0px;
   right: 40px;
   padding-top: 15px;
+
 }
 
 
@@ -67,6 +68,7 @@ body {
   right: 10px;
   // border: 1px solid #bdbdbd;
   padding-top: 15px;
+
 }
 
 
@@ -106,6 +108,9 @@ body {
   border-color: #54a754;
   background: #60c060;
 }
+.boom {
+  color: #F96B53;
+}
 
 .alert-info {
   background-color: #d9edf7;
@@ -135,13 +140,13 @@ body {
 .alert-danger {
   background-color: #f2dede;
   border-color: #e0b1b8;
-  color: #b94a48;
+  color: #F96B53;
 }
 
 .alert-white.alert-danger .icon,
 .alert-white.alert-danger .icon:after {
   border-color: #ca452e;
-  background: #da4932;
+  background: #F96B53;
 }
 
 
