@@ -1,58 +1,60 @@
-<div class="form-positon">
+<div class="form-positon fullscroll">
   <!-- START CREATION OF A TASK -->
   <%= simple_form_for @task do |f| %>
 
     <!-- TASK NAME -->
-    <div>
-      <h4>What's your task?</h4>
+    <div class="box-input">
+      <h4 class="title-input">What's your task?</h4>
       <%= f.input :name, label: false %>
     </div>
 
     <!-- SELECT BEACON -->
-    <div>
-      <h4>Select your Beacon</h4>
-      <p>Pssss! Remember to connect your Beacon!</p>
+    <div class="box-input">
+      <h4 class="title-input">Select your Beacon</h4>
       <%= f.input :beacon, label: false, collection: ["Bathroom", "Kitchen", "Bedroom"] %>
+      <p class="tips text-center">*Pssss! Remember to connect your Beacon!</p>
     </div>
 
     <!-- SET A DISTANCE -->
-    <div>
-      <h4>Distance</h4>
-      <p>It's in meters!</p>
+    <div class="box-input">
+      <h4 class="title-input">Distance</h4>
       <%= @task.errors[:distance] if @task.errors.key? :distance %>
       <div class="beacon-range">
         <input name="task[distance]" type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
-        <span id="range">0</span>
+        <p class="text-form"><span id="range">0</span> meters</p>
       </div>
     </div>
 
     <!-- SET A FREQUENCY -->
-    <div>
-      <h4>Frequency</h4>
-      <p>Weekdays</p>
-      <%= f.input :frequency, collection: Task::FREQUENCY_OPTIONS, as: :radio_buttons, label: false %>
+    <div class="box-input">
+      <h4 class="title-input">Frequency</h4>
+      <div class="radio-size">
+        <%= f.input :frequency, collection: Task::FREQUENCY_OPTIONS, as: :radio_buttons, label: false %>
+      </div>
     </div>
 
     <!-- DURATION OF THE TASK -->
-    <div>
-      <h4>For how long?</h4>
+    <div class="box-input">
+      <h4 class="title-input">For how long?</h4>
       <%= f.input :duration, label: false, collection: 1..100 %>
     </div>
 
     <!-- TIME SLOT -->
-    <div>
-      <h4>Time Slot</h4>
-      <p>When do you want your notifications ? </p>
-      <%= f.input :time_slot, collection: Task::TIME_SLOT_OPTIONS, as: :radio_buttons, label: false %>
+    <div class="box-input">
+      <h4 class="title-input">Time Slot</h4>
+      <p class="text-form">When do you want your notifications?</p>
+      <div class="radio-size">
+        <%= f.input :time_slot, collection: Task::TIME_SLOT_OPTIONS, as: :radio_buttons, label: false %>
+      </div>
     </div>
 
     <!-- QUOTE -->
-    <div">
-      <%= f.hint 'It all starts with the intention!', class: "form-content-white" %>
+    <div class="text-center box-input">
+      <%= f.hint '"It all starts with the intention!"', :class => "quote" %>
     </div>
 
     <!-- CREATE BUTTON -->
-    <div>
+    <div class="text-center end-box">
      <%= f.button :submit, class: "btn-form" %>
     </div>
   <% end %>
