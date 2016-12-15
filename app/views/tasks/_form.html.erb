@@ -20,7 +20,7 @@
       <h4 class="title-input">Set a distance:</h4>
       <%= @task.errors[:distance] if @task.errors.key? :distance %>
       <div class="beacon-range">
-        <input name="task[distance]" type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
+        <input class="range-resize" name="task[distance]" type="range" min="0" max="10" value="0" step="1" onchange="showValue(this.value)" />
         <p class="text-form"><span id="range">0</span> meters</p>
       </div>
     </div>
