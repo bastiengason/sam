@@ -2,6 +2,7 @@
   background-color: #ffffff;
   width: 100%;
   height: 200px;
+  padding-top: 25px;
 }
 
 .progress-bar-container {
@@ -34,4 +35,12 @@
   &.danger {
     background-color: $brand-color-light;
   }
+}
+
+svg {
+  height: 230px;
+}
+
+div[dir="ltr"] > div {
+  margin-top: -45px;
 }
