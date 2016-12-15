@@ -13,6 +13,27 @@ a {
   color: #1A1A1A;
 }
 
+a .link:active
+{
+     text-decoration:none;
+     cursor:pointer;
+}
+
+a .link:visited
+{
+     text-decoration:none;
+     cursor:pointer;
+}
+
+.link:focus {
+    color: #1A1A1A;
+    text-decoration: none;
+    &:hover{
+      color: #1A1A1A;
+      text-decoration: none;
+    }
+}
+
 p {
   font-size: 16px;
   font-family: $base-font;
