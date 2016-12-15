@@ -44,5 +44,4 @@ class Task < ApplicationRecord
       "Yay, you made " + name.downcase + " a habit. Well done!"
     end
   end
-
 end
